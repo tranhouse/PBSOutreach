@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html class=""><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Muuri - Responsive, sortable, filterable and draggable grid layouts</title>
+    <meta name="description" content="Muuri is a JavaScript library that creates responsive, sortable, filterable and draggable grid layouts.">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="PBS">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/demo-grid.css">
+
+
+  </head>
+
+  <body>
+
+    <header>
+   		<h1>PBS</h1>
+    </header>
+
+    <section class="grid-demo">
+
+      <h2 class="section-title"><span>PBS Outreach Event</span></h2>
+
+      	<div class="controls cf">
+	        <div class="control search">
+	          <div class="control-icon">
+	            <i class="material-icons">&#xE8B6;</i>
+	          </div>
+	          <input class="control-field search-field form-control " type="text" name="search" placeholder="Search..." />
+	        </div>
+
+	        <div class="control filter">
+	          <div class="control-icon">
+	            <i class="material-icons">&#xE152;</i>
+	          </div>
+	          <div class="select-arrow">
+	            <i class="material-icons">&#xE313;</i>
+	          </div>
+	          <select class="control-field filter-field form-control">
+	            <option value="" selected>All</option>
+	          </select>
+	        </div>
+	        
+	        <div class="control sort">
+	          <div class="control-icon">
+	            <i class="material-icons">&#xE164;</i>
+	          </div>
+	          <div class="select-arrow">
+	            <i class="material-icons">&#xE313;</i>
+	          </div>
+	          <select class="control-field sort-field form-control">
+	            <option value="order" selected>Drag</option>
+	          </select>
+	        </div>
+	        
+	        <div class="control layout">
+	          <div class="control-icon">
+	            <i class="material-icons">&#xE871;</i>
+	          </div>
+	          <div class="select-arrow">
+	            <i class="material-icons">&#xE313;</i>
+	          </div>
+	          <select class="control-field layout-field form-control">
+	            <option value="left-top" selected>Left Top</option>
+	          </select>
+	        </div>
+ 		
+
+ 		</div>
+
+      <div class="grid"></div>
+
+      <div class="grid-footer">
+        <button class="add-more-items btn btn-primary"><i class="material-icons">&#xE145;</i>Add more items</button>
+      </div>
+    </section>
+
+
+    <script src="src/web-animations-2.3.1.min.js"></script>
+    <script src="src/hammer-2.0.8.min.js"></script>
+    <script src="src/muuri.js"></script>
+    <script src="src/demo-grid.js"></script>
+
+
+</body></html>
