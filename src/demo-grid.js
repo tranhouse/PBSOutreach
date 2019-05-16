@@ -8,12 +8,17 @@ document.addEventListener('DOMContentLoaded', function () {
   var docElem = document.documentElement;
   var demo = document.querySelector('.grid-demo');
   var gridElement = demo.querySelector('.grid');
+  
   var filterField = demo.querySelector('.filter-field');
   var searchField = demo.querySelector('.search-field');
   var sortField = demo.querySelector('.sort-field');
   var layoutField = demo.querySelector('.layout-field');
+  
   var addItemsElement = demo.querySelector('.add-more-items');
+  
   var characters = 'abcdefghijklmnopqrstuvwxyz';
+  var eventCat = ['New to the PS', 'Service Buyback', 'Common Law'];
+
   var filterOptions = ['red', 'blue', 'green'];
   var dragOrder = [];
   var uuid = 0;
@@ -21,6 +26,11 @@ document.addEventListener('DOMContentLoaded', function () {
   var sortFieldValue;
   var layoutFieldValue;
   var searchFieldValue;
+
+  var tileSize = 2.0;
+  var startNumOfTiles = 3;
+  var numOfNewTiles = 1;
+  var counter = 0;
 
   //
   // Grid helper functions
@@ -30,19 +40,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     initGrid();
 
+    
     // Reset field values.
+    counter = 0;
+    /*
     searchField.value = '';
     [sortField, filterField, layoutField].forEach(function (field) {
       field.value = field.querySelectorAll('option')[0].value;
     });
+    */
 
     // Set inital search query, active filter, active sort value and active layout.
-    searchFieldValue = searchField.value.toLowerCase();
-    filterFieldValue = filterField.value;
-    sortFieldValue = sortField.value;
-    layoutFieldValue = layoutField.value;
+    searchFieldValue = ''; //searchField.value.toLowerCase();
+    filterFieldValue = ''; //filterField.value;
+    sortFieldValue = 'order'; //sortField.value;
+    layoutFieldValue = 'left-top'; //layoutField.value;
 
     // Search field binding.
+    /*
     searchField.addEventListener('keyup', function () {
       var newSearch = searchField.value.toLowerCase();
       if (searchFieldValue !== newSearch) {
@@ -50,11 +65,14 @@ document.addEventListener('DOMContentLoaded', function () {
         filter();
       }
     });
+    */
 
     // Filter, sort and layout bindings.
+    /*
     filterField.addEventListener('change', filter);
     sortField.addEventListener('change', sort);
     layoutField.addEventListener('change', changeLayout);
+    */
 
     // Add/remove items bindings.
     addItemsElement.addEventListener('click', addItems);
@@ -71,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var dragCounter = 0;
 
     grid = new Muuri(gridElement, {
-      items: generateElements(20),
+      items: generateElements(startNumOfTiles),
       layoutDuration: 400,
       layoutEasing: 'ease',
       dragEnabled: true,
@@ -99,9 +117,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
 
+  
   function filter() {
 
-    filterFieldValue = filterField.value;
+    filterFieldValue = ''; //filterField.value;
     grid.filter(function (item) {
       var element = item.getElement();
       var isSearchMatch = !searchFieldValue ? true : (element.getAttribute('data-title') || '').toLowerCase().indexOf(searchFieldValue) > -1;
@@ -110,11 +129,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
   }
+  
 
   function sort() {
 
     // Do nothing if sort value did not change.
-    var currentSort = sortField.value;
+    var currentSort = 'order'; //sortField.value;
     if (sortFieldValue === currentSort) {
       return;
     }
@@ -141,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function addItems() {
 
     // Generate new elements.
-    var newElems = generateElements(5);
+    var newElems = generateElements(numOfNewTiles);
 
     // Set the display of the new elements to "none" so it will be hidden by
     // default.
@@ -185,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function changeLayout() {
 
-    layoutFieldValue = layoutField.value;
+    layoutFieldValue = 'left-top';//layoutField.value;
     grid._settings.layout = {
       horizontal: false,
       alignRight: layoutFieldValue.indexOf('right') > -1,
@@ -209,8 +229,8 @@ document.addEventListener('DOMContentLoaded', function () {
         ++uuid,
         generateRandomWord(2),
         getRandomItem(filterOptions),
-        getRandomInt(1, 2),
-        getRandomInt(1, 2)
+        tileSize,
+        tileSize
       ));
     }
 
@@ -254,9 +274,15 @@ document.addEventListener('DOMContentLoaded', function () {
   function generateRandomWord(length) {
 
     var ret = '';
+    
+    ret = eventCat[counter];
+    counter ++;
+
+    /*
     for (var i = 0; i < length; i++) {
       ret += getRandomItem(characters);
     }
+    */
     return ret;
 
   }
