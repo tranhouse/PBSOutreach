@@ -6,8 +6,9 @@
 }
 .control {
   position: relative;
+
   float: left;
-  width: 25%;
+  width: 100%;
   padding: 0 10px;
 }
 @media (max-width: 600px) {
@@ -31,11 +32,7 @@
   z-index: 2;
   pointer-events: none;
 }
-.control-field {
-  position: relative;
-  padding-left: 40px;
-  z-index: 1;
-}
+
 
 /* Grid */
 
@@ -87,9 +84,9 @@
   right: 0;
   bottom: 0;
   text-align: center;
-  font-size: 24px;
-  font-weight: 300;
-  background-color: rgba(255,255,255,0.9);
+  word-wrap: break-word;
+  font-size: 13px;
+  font-weight: 500;
   border: 2px solid;
   color: #333;
   border-radius: 4px;
@@ -99,15 +96,157 @@
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-.item.red .card {
-  color: #f94a7a;
+
+.card-title{
+  color:black;
+  word-wrap: break-word;
 }
-.item.green .card {
-  color: #2ac06d;
-}
-.item.blue .card {
-  color: #4A9FF9;
-}
+
+.item.maroon .card { background-color:#800000}
+.item.red .card { background-color:#ff0000}
+.item.purple .card { background-color:#800080}
+.item.fuchsia .card { background-color:#ff00ff}
+.item.green .card { background-color:#008000}
+.item.lime .card { background-color:#00ff00}
+.item.olive .card { background-color:#808000}
+.item.yellow .card { background-color:#ffff00}
+.item.navy .card { background-color:#000080}
+.item.blue .card { background-color:#0000ff}
+.item.teal .card { background-color:#008080}
+.item.aqua .card { background-color:#00ffff}
+.item.orange .card { background-color:#ffa500}
+.item.aliceblue .card { background-color:#f0f8ff}
+.item.antiquewhite .card { background-color:#faebd7}
+.item.aquamarine .card { background-color:#7fffd4}
+.item.azure .card { background-color:#f0ffff}
+.item.beige .card { background-color:#f5f5dc}
+.item.bisque .card { background-color:#ffe4c4}
+.item.blanchedalmond .card { background-color:#ffebcd}
+.item.blueviolet .card { background-color:#8a2be2}
+.item.brown .card { background-color:#a52a2a}
+.item.burlywood .card { background-color:#deb887}
+.item.cadetblue .card { background-color:#5f9ea0}
+.item.chartreuse .card { background-color:#7fff00}
+.item.chocolate .card { background-color:#d2691e}
+.item.coral .card { background-color:#ff7f50}
+.item.cornflowerblue .card { background-color:#6495ed}
+.item.cornsilk .card { background-color:#fff8dc}
+.item.crimson .card { background-color:#dc143c}
+.item.cyan .card { background-color:#00ffff}
+.item.darkblue .card { background-color:#00008b}
+.item.darkcyan .card { background-color:#008b8b}
+.item.darkgoldenrod .card { background-color:#b8860b}
+.item.darkgray .card { background-color:#a9a9a9}
+.item.darkgreen .card { background-color:#006400}
+.item.darkgrey .card { background-color:#a9a9a9}
+.item.darkkhaki .card { background-color:#bdb76b}
+.item.darkmagenta .card { background-color:#8b008b}
+.item.darkolivegreen .card { background-color:#556b2f}
+.item.darkorange .card { background-color:#ff8c00}
+.item.darkorchid .card { background-color:#9932cc}
+.item.darkred .card { background-color:#8b0000}
+.item.darksalmon .card { background-color:#e9967a}
+.item.darkseagreen .card { background-color:#8fbc8f}
+.item.darkslateblue .card { background-color:#483d8b}
+.item.darkslategray .card { background-color:#2f4f4f}
+.item.darkslategrey .card { background-color:#2f4f4f}
+.item.darkturquoise .card { background-color:#00ced1}
+.item.darkviolet .card { background-color:#9400d3}
+.item.deeppink .card { background-color:#ff1493}
+.item.deepskyblue .card { background-color:#00bfff}
+.item.dimgray .card { background-color:#696969}
+.item.dimgrey .card { background-color:#696969}
+.item.dodgerblue .card { background-color:#1e90ff}
+.item.firebrick .card { background-color:#b22222}
+.item.floralwhite .card { background-color:#fffaf0}
+.item.forestgreen .card { background-color:#228b22}
+.item.gainsboro .card { background-color:#dcdcdc}
+.item.ghostwhite .card { background-color:#f8f8ff}
+.item.gold .card { background-color:#ffd700}
+.item.goldenrod .card { background-color:#daa520}
+.item.greenyellow .card { background-color:#adff2f}
+.item.grey .card { background-color:#808080}
+.item.honeydew .card { background-color:#f0fff0}
+.item.hotpink .card { background-color:#ff69b4}
+.item.indianred .card { background-color:#cd5c5c}
+.item.indigo .card { background-color:#4b0082}
+.item.ivory .card { background-color:#fffff0}
+.item.khaki .card { background-color:#f0e68c}
+.item.lavender .card { background-color:#e6e6fa}
+.item.lavenderblush .card { background-color:#fff0f5}
+.item.lawngreen .card { background-color:#7cfc00}
+.item.lemonchiffon .card { background-color:#fffacd}
+.item.lightblue .card { background-color:#add8e6}
+.item.lightcoral .card { background-color:#f08080}
+.item.lightcyan .card { background-color:#e0ffff}
+.item.lightgoldenrodyellow .card { background-color:#fafad2}
+.item.lightgray .card { background-color:#d3d3d3}
+.item.lightgreen .card { background-color:#90ee90}
+.item.lightgrey .card { background-color:#d3d3d3}
+.item.lightpink .card { background-color:#ffb6c1}
+.item.lightsalmon .card { background-color:#ffa07a}
+.item.lightseagreen .card { background-color:#20b2aa}
+.item.lightskyblue .card { background-color:#87cefa}
+.item.lightslategray .card { background-color:#778899}
+.item.lightslategrey .card { background-color:#778899}
+.item.lightsteelblue .card { background-color:#b0c4de}
+.item.lightyellow .card { background-color:#ffffe0}
+.item.limegreen .card { background-color:#32cd32}
+.item.linen .card { background-color:#faf0e6}
+.item.magenta .card { background-color:#ff00ff}
+.item.mediumaquamarine .card { background-color:#66cdaa}
+.item.mediumblue .card { background-color:#0000cd}
+.item.mediumorchid .card { background-color:#ba55d3}
+.item.mediumpurple .card { background-color:#9370db}
+.item.mediumseagreen .card { background-color:#3cb371}
+.item.mediumslateblue .card { background-color:#7b68ee}
+.item.mediumspringgreen .card { background-color:#00fa9a}
+.item.mediumturquoise .card { background-color:#48d1cc}
+.item.mediumvioletred .card { background-color:#c71585}
+.item.midnightblue .card { background-color:#191970}
+.item.mintcream .card { background-color:#f5fffa}
+.item.mistyrose .card { background-color:#ffe4e1}
+.item.moccasin .card { background-color:#ffe4b5}
+.item.navajowhite .card { background-color:#ffdead}
+.item.oldlace .card { background-color:#fdf5e6}
+.item.olivedrab .card { background-color:#6b8e23}
+.item.orangered .card { background-color:#ff4500}
+.item.orchid .card { background-color:#da70d6}
+.item.palegoldenrod .card { background-color:#eee8aa}
+.item.palegreen .card { background-color:#98fb98}
+.item.paleturquoise .card { background-color:#afeeee}
+.item.palevioletred .card { background-color:#db7093}
+.item.papayawhip .card { background-color:#ffefd5}
+.item.peachpuff .card { background-color:#ffdab9}
+.item.peru .card { background-color:#cd853f}
+.item.pink .card { background-color:#ffc0cb}
+.item.plum .card { background-color:#dda0dd}
+.item.powderblue .card { background-color:#b0e0e6}
+.item.rosybrown .card { background-color:#bc8f8f}
+.item.royalblue .card { background-color:#4169e1}
+.item.saddlebrown .card { background-color:#8b4513}
+.item.salmon .card { background-color:#fa8072}
+.item.sandybrown .card { background-color:#f4a460}
+.item.seagreen .card { background-color:#2e8b57}
+.item.seashell .card { background-color:#fff5ee}
+.item.sienna .card { background-color:#a0522d}
+.item.skyblue .card { background-color:#87ceeb}
+.item.slateblue .card { background-color:#6a5acd}
+.item.slategray .card { background-color:#708090}
+.item.slategrey .card { background-color:#708090}
+.item.snow .card { background-color:#fffafa}
+.item.springgreen .card { background-color:#00ff7f}
+.item.steelblue .card { background-color:#4682b4}
+.item.tan .card { background-color:#d2b48c}
+.item.thistle .card { background-color:#d8bfd8}
+.item.tomato .card { background-color:#ff6347}
+.item.turquoise .card { background-color:#40e0d0}
+.item.violet .card { background-color:#ee82ee}
+.item.wheat .card { background-color:#f5deb3}
+.item.whitesmoke .card { background-color:#f5f5f5}
+.item.yellowgreen .card { background-color:#9acd32}
+
+
 .card-id {
   position: absolute;
   left: 7px;

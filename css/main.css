@@ -59,6 +59,9 @@ a:hover {
 }
 
 /* Buttons */
+.individualWidth{
+  width:100%;
+}
 
 .btn {
   display: inline-block;

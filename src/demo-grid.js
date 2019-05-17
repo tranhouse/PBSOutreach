@@ -8,47 +8,57 @@ document.addEventListener('DOMContentLoaded', function () {
   var docElem = document.documentElement;
   var demo = document.querySelector('.grid-demo');
   var gridElement = demo.querySelector('.grid');
-  
-  var filterField = demo.querySelector('.filter-field');
   var searchField = demo.querySelector('.search-field');
-  var sortField = demo.querySelector('.sort-field');
-  var layoutField = demo.querySelector('.layout-field');
-  
   var addItemsElement = demo.querySelector('.add-more-items');
   
-  var characters = 'abcdefghijklmnopqrstuvwxyz';
-  var eventCat = ['New to the PS', 'Service Buyback', 'Common Law'];
+  //Categories that have been established in the Event Outreach Program by GEIR
+  //----------------------------------------------------------------------------------------------------------------------------------------
+  var eventCat = ['New to the PS','General', 'PIBS', 'Service Buyback','Plan Information', 'Married-Common Law', 'Disability', 'Parenthood', 
+                    'Divorce or Seperation', 'WFA-Terminating', 'Death', 'Working past 65', 'Plan Member Responsibilities', 'Preparing for Retirement',
+                    'Contribution Rates','LWOP', 'Pension Transfer', 'Bridge Benefits', 'Newly Retired', 'Reaching 65', 'Re-employment', 'Indexing Rates', 'APS',
+                     'Deferred Pension Plan', 'Web Tools', 'Surivor and Dependents', 'Pension Centre', 'Forms', 'Phoenix', 'CAF and RCMP',
+                     'Eligibility', 'Pay Centre', 'Health Care Plan', 'Dental Care Plan', 'DI', 'PSMIP', 'EX Benefits', 'Living Outside Canada',
+                     'Deferred Benefits Plan', 'Remarrying', 'Submit a Claim', 'Rates', 'Contact Info'];
+  //----------------------------------------------------------------------------------------------------------------------------------------
+  
+  //143 Unique colours array to choose from
+  //----------------------------------------------------------------------------------------------------------------------------------------
+  var tileColours = ['maroon', 'red', 'purple', ' fuchsia', 'green', 'lime', 'olive', 'yellow', 'navy', 'blue', 'teal', 'aqua', 'orange', 'aliceblue', 
+  'antiquewhite', 'aquamarine', 'azure', 'beige', 'bisque', 'blanchedalmond', 'blueviolet', 'brown', 'burlywood', 'cadetblue', 'chartreuse', 'chocolate', 
+  'coral', 'cornflowerblue', 'cornsilk', 'crimson', 'cyan', 'darkblue', 'darkcyan', 'darkgoldenrod', 'darkgray', 'darkgreen', 'darkgrey', 'darkkhaki', 
+  'darkmagenta', 'darkolivegreen', 'darkorange', 'darkorchid', 'darkred', 'darksalmon', 'darkseagreen', 'darkslateblue', 'darkslategray', 'darkslategrey', 
+  'darkturquoise', 'darkviolet', 'deeppink', 'deepskyblue', 'dimgray', 'dimgrey', 'dodgerblue', 'firebrick', 'floralwhite', 'forestgreen', 'gainsboro', 
+  'ghostwhite', 'gold', 'goldenrod', 'greenyellow', 'grey', 'honeydew', 'hotpink', 'indianred', 'indigo', 'ivory', 'khaki', 'lavender', 'lavenderblush', 
+  'lawngreen', 'lemonchiffon', 'lightblue', 'lightcoral', 'lightcyan', 'lightgoldenrodyellow', 'lightgray', 'lightgreen', 'lightgrey', 'lightpink', 
+  'lightsalmon', 'lightseagreen', 'lightskyblue', 'lightslategray', 'lightslategrey', 'lightsteelblue', 'lightyellow', 'limegreen', 'linen', 'magenta', 
+  'mediumaquamarine', 'mediumblue', 'mediumorchid', 'mediumpurple', 'mediumseagreen', 'mediumslateblue', 'mediumspringgreen', 'mediumturquoise', 
+  'mediumvioletred', 'midnightblue', 'mintcream', 'mistyrose', 'moccasin', 'navajowhite', 'oldlace', 'olivedrab', 'orangered', 'orchid', 'palegoldenrod', 
+  'palegreen', 'paleturquoise', 'palevioletred', 'papayawhip', 'peachpuff', 'peru', 'pink', 'plum', 'powderblue', 'rosybrown', 'royalblue', 'saddlebrown', 
+  'salmon', 'sandybrown', 'seagreen', 'seashell', 'sienna', 'skyblue', 'slateblue', 'slategray', 'slategrey', 'snow', 'springgreen', 'steelblue', 'tan', 
+  'thistle', 'tomato', 'turquoise', 'violet', 'wheat', 'whitesmoke', 'yellowgreen'];
+  //----------------------------------------------------------------------------------------------------------------------------------------
 
-  var filterOptions = ['red', 'blue', 'green'];
   var dragOrder = [];
+  
   var uuid = 0;
+
   var filterFieldValue;
   var sortFieldValue;
   var layoutFieldValue;
   var searchFieldValue;
 
   var tileSize = 2.0;
-  var startNumOfTiles = 3;
+  var startNumOfTiles = 43;
   var numOfNewTiles = 1;
   var counter = 0;
 
   //
   // Grid helper functions
   //
-
+  //----------------------------------------------------------------------------------------------------------------------------------------
   function initDemo() {
 
-    initGrid();
-
-    
-    // Reset field values.
-    counter = 0;
-    /*
-    searchField.value = '';
-    [sortField, filterField, layoutField].forEach(function (field) {
-      field.value = field.querySelectorAll('option')[0].value;
-    });
-    */
+    initGrid();    
 
     // Set inital search query, active filter, active sort value and active layout.
     searchFieldValue = ''; //searchField.value.toLowerCase();
@@ -56,8 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
     sortFieldValue = 'order'; //sortField.value;
     layoutFieldValue = 'left-top'; //layoutField.value;
 
-    // Search field binding.
-    /*
+    // Search field binding. 
     searchField.addEventListener('keyup', function () {
       var newSearch = searchField.value.toLowerCase();
       if (searchFieldValue !== newSearch) {
@@ -65,14 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
         filter();
       }
     });
-    */
-
-    // Filter, sort and layout bindings.
-    /*
-    filterField.addEventListener('change', filter);
-    sortField.addEventListener('change', sort);
-    layoutField.addEventListener('change', changeLayout);
-    */
+    
 
     // Add/remove items bindings.
     addItemsElement.addEventListener('click', addItems);
@@ -83,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
   }
-
+  //----------------------------------------------------------------------------------------------------------------------------------------
   function initGrid() {
 
     var dragCounter = 0;
@@ -117,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
 
-  
+  //----------------------------------------------------------------------------------------------------------------------------------------
   function filter() {
 
     filterFieldValue = ''; //filterField.value;
@@ -130,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
   
-
+  //----------------------------------------------------------------------------------------------------------------------------------------
   function sort() {
 
     // Do nothing if sort value did not change.
@@ -155,9 +157,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Update indices and active sort value.
     updateIndices();
     sortFieldValue = currentSort;
-
   }
 
+  //----------------------------------------------------------------------------------------------------------------------------------------
   function addItems() {
 
     // Generate new elements.
@@ -183,9 +185,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Finally filter the items.
     filter();
-
   }
 
+  //----------------------------------------------------------------------------------------------------------------------------------------
   function removeItem(e) {
 
     var elem = elementClosest(e.target, '.item');
@@ -200,9 +202,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }});
     updateIndices();
-
   }
 
+  //----------------------------------------------------------------------------------------------------------------------------------------
   function changeLayout() {
 
     layoutFieldValue = 'left-top';//layoutField.value;
@@ -216,6 +218,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
 
+  //----------------------------------------------------------------------------------------------------------------------------------------
   //
   // Generic helper functions
   //
@@ -227,17 +230,20 @@ document.addEventListener('DOMContentLoaded', function () {
     for (var i = 0; i < amount; i++) {
       ret.push(generateElement(
         ++uuid,
-        generateRandomWord(2),
-        getRandomItem(filterOptions),
+        eventCat[counter],
+        tileColours[counter],
         tileSize,
         tileSize
       ));
+      counter = counter + 1;
     }
 
+ 
     return ret;
 
   }
 
+  //----------------------------------------------------------------------------------------------------------------------------------------
   function generateElement(id, title, color, width, height) {
 
     var itemElem = document.createElement('div');
@@ -258,12 +264,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
 
-  function getRandomItem(collection) {
-
-    return collection[Math.floor(Math.random() * collection.length)];
-
-  }
-
+  //----------------------------------------------------------------------------------------------------------------------------------------
   // https://stackoverflow.com/a/7228322
   function getRandomInt(min,max) {
 
@@ -271,22 +272,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
 
-  function generateRandomWord(length) {
-
-    var ret = '';
-    
-    ret = eventCat[counter];
-    counter ++;
-
-    /*
-    for (var i = 0; i < length; i++) {
-      ret += getRandomItem(characters);
-    }
-    */
-    return ret;
-
-  }
-
+  //----------------------------------------------------------------------------------------------------------------------------------------
   function compareItemTitle(a, b) {
 
     var aVal = a.getElement().getAttribute('data-title') || '';
@@ -295,6 +281,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
 
+  //----------------------------------------------------------------------------------------------------------------------------------------
   function compareItemColor(a, b) {
 
     var aVal = a.getElement().getAttribute('data-color') || '';
@@ -303,6 +290,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
 
+  //----------------------------------------------------------------------------------------------------------------------------------------
   function updateIndices() {
 
     grid.getItems().forEach(function (item, i) {
@@ -312,6 +300,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
 
+  //----------------------------------------------------------------------------------------------------------------------------------------
   function elementMatches(element, selector) {
 
     var p = Element.prototype;
@@ -319,6 +308,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
 
+  //----------------------------------------------------------------------------------------------------------------------------------------
   function elementClosest(element, selector) {
 
     if (window.Element && !Element.prototype.closest) {
