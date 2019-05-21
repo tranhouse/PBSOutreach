@@ -25,6 +25,15 @@
 
       <h2 class="section-title"><span>PBS Outreach Event</span></h2>
 
+        <div id="webStats" class="rcorners" hidden>
+          <div class = "numPeople"><p> People spoken to: </p></div>
+          <div class = "numQuestions"><p> Number of Questions Asked: </p></div>
+          <div class = "avgQuestions"><p> Average Questions per Person: </p></div>
+          <div class = "topQuestions"><p> List of top 5: </p></div>
+        </div>
+
+        <button class = "individualWidth">WEB STATISTICS</button>
+
       	<button class = "btn individualWidth">INDIVIDUAL</button>
       	
       	<div class="controls cf">
@@ -46,6 +55,15 @@
     <script src="src/hammer-2.0.8.min.js"></script>
     <script src="src/muuri.js"></script>
     <script src="src/demo-grid.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("#webStats").toggle();
+      });
+    });
+    </script>
 
 
 </body></html>
