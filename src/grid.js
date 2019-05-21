@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var grid = null;
   var docElem = document.documentElement;
-  var demo = document.querySelector('.grid-demo');
+  var demo = document.querySelector('.grid-PBS');
   var gridElement = demo.querySelector('.grid');
   var searchField = demo.querySelector('.search-field');
   var addItemsElement = demo.querySelector('.add-more-items');
@@ -83,6 +83,8 @@ document.addEventListener('DOMContentLoaded', function () {
         removeItem(e);
       }
     });
+
+
 
   }
   //----------------------------------------------------------------------------------------------------------------------------------------
