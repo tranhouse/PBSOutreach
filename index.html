@@ -3,7 +3,7 @@
 <html class=""><head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Muuri - Responsive, sortable, filterable and draggable grid layouts</title>
+    <title>PBS Outreach Event Statistics</title>
     <meta name="description" content="Muuri is a JavaScript library that creates responsive, sortable, filterable and draggable grid layouts.">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="PBS">
@@ -21,12 +21,14 @@
    		<h1>PBS</h1>
     </header>
 
+    <!-- ---------------------------- HTML TEMPLATE -------------------------------- -->
     <section class="grid-PBS">
 
       <h2 class="section-title"><span>PBS Outreach Event</span></h2>
 
+        <!-- ---------------------------- WEB STATS -------------------------------- -->
         <div id="webStats" class="rcorners" hidden>
-          <div class = "numPeople"><p> People spoken to: </p></div>
+          <div class = "numPeople"><p> Number of People Spoken to: </p></div>
           <div class = "numQuestions"><p> Number of Questions Asked: </p></div>
           <div class = "avgQuestions"><p> Average Questions per Person: </p></div>
           <div class = "topQuestions"><p> List of top 5: </p></div>
@@ -40,17 +42,17 @@
 	        <div class="control search">
 	          <input class="control-field search-field form-control " type="text" name="search" placeholder="Search..." />
 	        </div>
-
- 		</div>
+ 		   </div>
 
       <div class="grid"></div>
 
       <div class="grid-footer">
         <button class="add-more-items btn btn-primary"><i class="material-icons">&#xE145;</i>Add more items</button>
       </div>
+    
     </section>
 
-
+    <!-- ---------------------------- JAVASCRIPT SOURCES -------------------------------- -->
     <script src="src/web-animations-2.3.1.min.js"></script>
     <script src="src/hammer-2.0.8.min.js"></script>
     <script src="src/muuri.js"></script>
