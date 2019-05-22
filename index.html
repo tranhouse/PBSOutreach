@@ -1,32 +1,34 @@
 <!doctype html>
 
-<html class=""><head>
+<html class="">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>PBS Outreach Event Statistics</title>
     <meta name="description" content="Muuri is a JavaScript library that creates responsive, sortable, filterable and draggable grid layouts.">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="PBS">
+   
+  <!-- --------------------------- CSS -------------------------- -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/demo-grid.css">
-
-
   </head>
 
+  <!-- --------------------------- BODY -------------------------- -->
   <body>
 
     <header>
    		<h1>PBS</h1>
     </header>
 
-    <!-- ---------------------------- HTML TEMPLATE -------------------------------- -->
+    <!-- ---------------------------- HTML TEMPLATE --------------------------------- -->
     <section class="grid-PBS">
 
       <h2 class="section-title"><span>PBS Outreach Event</span></h2>
 
-        <!-- ---------------------------- WEB STATS -------------------------------- -->
+        <!-- ---------------------------- WEB STATS --------------------------------- -->
         <div id="webStats" class="rcorners" hidden>
           <div class = "numPeople"><p> Number of People Spoken to: </p></div>
           <div class = "numQuestions"><p> Number of Questions Asked: </p></div>
@@ -44,8 +46,10 @@
 	        </div>
  		   </div>
 
-      <div class="grid"></div>
+      <!-- ----------------------- CREATE TILES ------------------------------------ -->
+      <div id="tiles" class="grid"></div>
 
+      <!-- ----------------------- FOOTER ADD TILE --------------------------------- -->
       <div class="grid-footer">
         <button class="add-more-items btn btn-primary"><i class="material-icons">&#xE145;</i>Add more items</button>
       </div>
@@ -58,16 +62,8 @@
     <script src="src/muuri.js"></script>
     <script src="src/grid.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="src/grid-listener.js"></script>
 
-    <script>
-    $(document).ready(function(){
-        $("button").click(function(){
-          if(this.id == 'foo'){
-            $("#webStats").toggle();
-          }
-      });
-    });
-    </script>
+</body>
 
-
-</body></html>
+</html>

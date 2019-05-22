@@ -240,7 +240,6 @@ document.addEventListener('DOMContentLoaded', function () {
       counter = counter + 1;
     }
 
- 
     return ret;
 
   }
@@ -254,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function () {
         '<div class="' + classNames + '" data-id="' + id + '" data-color="' + color + '" data-title="' + title + '">' +
           '<div class="item-content">' +
             '<div class="card">' +
-              '<div class="card-id">' + id + '</div>' +
+              '<div id= "' + id +'" class="card-id">' + id + '</div>' +
               '<div class="card-title">' + title + '</div>' +
               '<div class="card-remove"><i class="material-icons">&#xE5CD;</i></div>' +
             '</div>' +
