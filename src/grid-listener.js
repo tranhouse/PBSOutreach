@@ -6,10 +6,10 @@ $(document).ready(function(){
         }
     });
 
-    $("#tiles div").click(function(){
-      alert($(this).attr("id"));
-    return false; // avoid parents divs if you have nested divs
-    });
+	$(#tiles).click(function(event) {
+    	if($(event.target).is('#1')) {
+       		alert("hello");
+    	} 
+	});
 
 });
-
