@@ -1,4 +1,5 @@
-$(document).ready(function(){
+$(window).on('load', function() {
+
     
     $("button").click(function(){
         if(this.id == 'foo'){
@@ -6,10 +7,10 @@ $(document).ready(function(){
         }
     });
 
-	$(#tiles).click(function(event) {
-    	if($(event.target).is('#1')) {
-       		alert("hello");
-    	} 
-	});
 
+	$('div div div div').unbind().mouseover(function() {
+    
+       	alert($(this).children().attr("id"));
+    	return false;
+   	});
 });
