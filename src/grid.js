@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var searchFieldValue;
 
   var tileSize = 2.0;
-  var startNumOfTiles = 43;
+  var startNumOfTiles = eventCat.length -1;
   var numOfNewTiles = 1;
   var counter = 0;
 
