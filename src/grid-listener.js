@@ -77,6 +77,18 @@ $(window).on('load', function() {
 	$('div').mousedown(function() {
     	if( ($(this).children().attr("id")>0) ){
     		
+        //-----change colour-----
+          // make a jQ collection of the DOM element from the event
+          var $elem = $(this);
+          // store the background-color
+          var oldBG = $elem.css('background-color');
+          // change the background color to what you want
+          $elem.css('backgroundColor', '#FFFFFF');
+          // after 1 second, change it back
+          setTimeout(function() {
+            $elem.css('background-color', oldBG);
+          }, 1000);
+
     		//After determining which tile was clicked, must subtract 1 to correspond to the array
     		var index = ($(this).children().attr("id")) -1;
     		
