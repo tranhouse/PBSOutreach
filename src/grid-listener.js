@@ -87,7 +87,7 @@ $(window).on('load', function() {
           // after 1 second, change it back
           setTimeout(function() {
             $elem.css('background-color', oldBG);
-          }, 1000);
+          }, 50);
 
     		//After determining which tile was clicked, must subtract 1 to correspond to the array
     		var index = ($(this).children().attr("id")) -1;
