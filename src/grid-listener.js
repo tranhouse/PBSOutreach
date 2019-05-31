@@ -3,6 +3,7 @@ $(window).on('load', function() {
 
 	//----------------------------- Initalize array of counting questions ---------------------------------------
 	
+  //-----we need to replicate this array with the one in the grid.ds -- don't know how yet-------
 	var eventCat = ['New to the PS','General', 'PIBS', 'Service Buyback','Plan Information', 'Married-Common Law', 'Disability', 'Parenthood', 
                     'Divorce or Seperation', 'WFA-Terminating', 'Death', 'Working past 65', 'Plan Member Responsibilities', 'Preparing for Retirement',
                     'Contribution Rates','LWOP', 'Pension Transfer', 'Bridge Benefits', 'Newly Retired', 'Reaching 65', 'Re-employment', 'Indexing Rates', 'APS',
