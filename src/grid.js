@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var searchFieldValue;
 
   var tileSize = 2.0;
-  var startNumOfTiles = eventCat.length -1;
+  var startNumOfTiles = eventCat.length;
   var numOfNewTiles = 1;
   var counter = 0;
 
@@ -163,6 +163,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //----------------------------------------------------------------------------------------------------------------------------------------
   function addItems() {
+
+    //----push new input value into array----
+    eventCat.push(document.getElementById("newTileName").value);
 
     // Generate new elements.
     var newElems = generateElements(numOfNewTiles);
