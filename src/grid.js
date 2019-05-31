@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     'Deferred Benefits Plan', 'Remarrying', 'Submit a Claim', 'Rates', 'Contact Info'];
   //----------------------------------------------------------------------------------------------------------------------------------------
   
-  //143 Unique colours array to choose from
+  //135 Unique colours array to choose from
   //----------------------------------------------------------------------------------------------------------------------------------------
   var tileColours = ['maroon', 'red', 'purple', ' fuchsia', 'green', 'lime', 'olive', 'yellow', 'teal', 'aqua', 'orange', 'aliceblue', 
   'antiquewhite', 'aquamarine', 'blueviolet', 'brown', 'burlywood', 'cadetblue', 'chartreuse', 'chocolate', 
