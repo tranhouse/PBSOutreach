@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var averageQuestions = 0;       //Calculates the average number of questions a person asks
   var questPerPerson = Array(500);    //Keeps track of the number of questions asked PER person
   var totalQuestions = 0;         //Keeps track of the number of questions asked
-  var masterCount = new Array(eventCat.length -1);  //Keeps track of all the different questions asked
-  var topRank   = new Array(eventCat.length -1);  //Used to keep track of the top list of questions asked
+  var masterCount = new Array();  //Keeps track of all the different questions asked
+  var topRank   = new Array();  //Used to keep track of the top list of questions asked
     
     //Creating a double array
     for(var i=0; i < eventCat.length; i++){
@@ -272,6 +272,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //----push new input value into array----
     eventCat.push(document.getElementById("newTileName").value);
+
+    var catNewLength = eventCat.length;
+    
+    masterCount[catNewLength-1]   = new Array(2);
+    topRank[catNewLength-1]       = new Array(2);
+  
+    masterCount[catNewLength-1][0] = eventCat[catNewLength-1];
+    masterCount[catNewLength-1][1] = 0;
+
+
 
     // Generate new elements.
     var newElems = generateElements(numOfNewTiles);
