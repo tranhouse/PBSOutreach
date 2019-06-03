@@ -11,7 +11,7 @@ $(window).on('load', function() {
                     'Eligibility', 'Pay Centre', 'Health Care Plan', 'Dental Care Plan', 'DI', 'PSMIP', 'EX Benefits', 'Living Outside Canada',
                     'Deferred Benefits Plan', 'Remarrying', 'Submit a Claim', 'Rates', 'Contact Info'];
 
-	var quesCount 	= Array(50).fill(0);	//Keeps track of all the different questions asked, but resets after each person
+	var quesCount 	= 0;					//Keeps track of all the different questions asked per person, but resets after each new person
 	var personCount = 0;					//Keeps track of the number of people spoken to
 	var averageQuestions = 0;				//Calculates the average number of questions a person asks
     var questPerPerson = Array(500);		//Keeps track of the number of questions asked PER person
@@ -46,7 +46,7 @@ $(window).on('load', function() {
         if(this.id == 'person'){
 
         	//total up array, find average
-        	questPerPerson[personCount] = quesCount.reduce(getSum);
+        	questPerPerson[personCount] = quesCount;
         	personCount ++;
         	averageQuestions = questPerPerson.reduce(getSum) / personCount;
 
@@ -57,7 +57,7 @@ $(window).on('load', function() {
         	topRank.sort(function(a,b){return b[1]-a[1]});
 
         	//Reset each question from person
-        	quesCount 	= Array(50).fill(0);
+        	quesCount 	= 0;
     		
         	//Update webstats divs
   			document.getElementById("numPeople").innerHTML = '<b><u>Number of People Spoken to:</u></b> '				+ personCount;
@@ -93,7 +93,7 @@ $(window).on('load', function() {
     		//After determining which tile was clicked, must subtract 1 to correspond to the array
     		var index = ($(this).children().attr("id")) -1;
     		
-    		quesCount[index]++;
+    		quesCount++;
     		masterCount[index][1]++;
     	
     	}
