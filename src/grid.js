@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
   //----------------------------------------------------------------------------------------------------------------------------------------
 
   var dragOrder = [];
-  
   var uuid = 0;
 
   var filterFieldValue;
@@ -52,29 +51,27 @@ document.addEventListener('DOMContentLoaded', function () {
   var numOfNewTiles = 1;
   var counter = 0;
 
-
-  var quesCount   = 0;          //Keeps track of all the different questions asked per person, but resets after each new person
-  var personCount = 0;          //Keeps track of the number of people spoken to
-  var averageQuestions = 0;       //Calculates the average number of questions a person asks
-  var questPerPerson = Array(500);    //Keeps track of the number of questions asked PER person
-  var totalQuestions = 0;         //Keeps track of the number of questions asked
-  var masterCount = new Array();  //Keeps track of all the different questions asked
-  var topRank   = new Array();  //Used to keep track of the top list of questions asked
+  var quesCount   = 0;              //Keeps track of all the different questions asked per person, but resets after each new person
+  var personCount = 0;              //Keeps track of the number of people spoken to
+  var averageQuestions = 0;         //Calculates the average number of questions a person asks
+  var questPerPerson = Array(500);  //Keeps track of the number of questions asked PER person
+  var totalQuestions = 0;           //Keeps track of the number of questions asked
+  var masterCount = new Array();    //Keeps track of all the different questions asked
+  var topRank   = new Array();      //Used to keep track of the top list of questions asked
     
-    //Creating a double array
+  //Creating a double array
     for(var i=0; i < eventCat.length; i++){
       masterCount[i]  = new Array(2);
       topRank[i]    = new Array(2);
     }
   
-    //initalizing double array and assigning it the event categories 
+  //initalizing double array and assigning it the event categories 
     for (var j=0; j< eventCat.length; j++){
       for (var k=0; k<2; k++){
         masterCount[j][0] = eventCat[j];
         masterCount[j][1] = 0;
       }
     }
-
 
   //
   // Grid helper functions
@@ -109,15 +106,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-//------------- BUTTONS----------------------------
+    //------------- BUTTONS----------------------------
     $("button").click(function(){
         
-        //-------------- webstats menu ---------------
+        //-------------- webstats menu ----------------
         if(this.id == 'stats'){
           $("#webStats").toggle();
         }
     
-      //---------- calculations of webstats --------
+      //---------- calculations of webstats -----------
         if(this.id == 'person'){
 
           //total up array, find average
@@ -150,42 +147,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     //-------------- WHAT TILE WAS CLICKED AND COUNT ------------------------
-  $('div').mousedown(function() {
-      if( ($(this).children().attr("id")>0) ){
-        
+    $('.card').mousedown(function() {
+
+        var index = ($(this).attr("id")) -1;
         //-----change colour-----
           // make a jQ collection of the DOM element from the event
           var $elem = $(this);
-          // store the background-color
-          var oldBG = $elem.css('background-color');
           // change the background color to what you want
           $elem.css('backgroundColor', '#FFFFFF');
           // after 1 second, change it back
           setTimeout(function() {
-            $elem.css('background-color', oldBG);
+            $elem.css('background-color', tileColours[index]);
           }, 50);
 
         //After determining which tile was clicked, must subtract 1 to correspond to the array
-        var index = ($(this).children().attr("id")) -1;
+        
         
         quesCount++;
         masterCount[index][1]++;
       
-      }
-    });
-
-
-
-
-
-
-
-
-
-
-  }
-
-
+      });
+    }
 
 
   //-------------------------------------------To find the sum inside an array--------------------------------------------------------------
@@ -274,13 +256,12 @@ document.addEventListener('DOMContentLoaded', function () {
     eventCat.push(document.getElementById("newTileName").value);
 
     var catNewLength = eventCat.length;
-    
+
     masterCount[catNewLength-1]   = new Array(2);
     topRank[catNewLength-1]       = new Array(2);
-  
+   
     masterCount[catNewLength-1][0] = eventCat[catNewLength-1];
     masterCount[catNewLength-1][1] = 0;
-
 
 
     // Generate new elements.
@@ -306,6 +287,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Finally filter the items.
     filter();
+
+    //--------EVENT LISTENER------
+
+    $('#' + uuid).mousedown(function() {
+         var index = ($(this).attr("id")) -1;
+        //-----change colour-----
+          // make a jQ collection of the DOM element from the event
+          var $elem = $(this);
+
+          // change the background color to what you want
+          $elem.css('backgroundColor', '#FFFFFF');
+          // after 1 second, change it back
+          setTimeout(function() {
+            $elem.css('background-color', tileColours[index]);
+          }, 50);
+
+        //After determining which tile was clicked, must subtract 1 to correspond to the array
+        quesCount++;
+        masterCount[index][1]++;
+      
+    });
+
   }
 
   //----------------------------------------------------------------------------------------------------------------------------------------
@@ -371,8 +374,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var itemTemplate = '' +
         '<div class="' + classNames + '" data-id="' + id + '" data-color="' + color + '" data-title="' + title + '">' +
           '<div class="item-content">' +
-            '<div class="card">' +
-              '<div id= "' + id +'" class="card-id">' + id + '</div>' +
+            '<div id="' + id + '" class="card">' +
+              '<div class="card-id">' + id + '</div>' +
               '<div class="card-title">' + title + '</div>' +
               '<div class="card-remove"><i class="material-icons">&#xE5CD;</i></div>' +
             '</div>' +
