@@ -141,9 +141,17 @@ document.addEventListener('DOMContentLoaded', function () {
                                       topRank[2][0] + ' : ' + topRank[2][1] + '<br />' +
                                       topRank[3][0] + ' : ' + topRank[3][1] + '<br />' +
                                       topRank[4][0] + ' : ' + topRank[4][1] + '<br />';
-
-
         } //end if
+
+        if(this.id =='summary'){
+          for(i=0; i<eventCat.length; i++){   
+            document.write(masterCount[i][0] + "&nbsp - &nbsp" + masterCount[i][1]);
+            document.write("<br>");
+          }
+        }
+
+
+
     });
 
     //-------------- WHAT TILE WAS CLICKED AND COUNT ------------------------
