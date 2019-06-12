@@ -28,19 +28,22 @@
     <!-- ---------------------------- HTML TEMPLATE --------------------------------- -->
     <section class="grid-PBS">
 
-      <h2 class="section-title"><span>Outreach Event App</span></h2>
+      <h2 class="section-title"><span>Outreach Event Application</span></h2>
 
         <!-- ---------------------------- WEB STATS --------------------------------- -->
-        <div id="webStats" class="rcorners" hidden>
+        <div id="webStats" class="" hidden>
           <p id = "numPeople"> <b><u>Number of People Spoken to:</u></b> </p>
           <p id = "numQuestions"> <b><u>Number of Questions Asked:</u></b> </p>
           <p id = "avgQuestions"> <b><u>Average Questions per Person:</u></b> </p>
           <p id = "topQuestions"> <b><u>List of top 5:</u></b> </p>
         </div>
 
-        <button id= "stats" class = "individualWidth">WEB STATISTICS</button>
-
-      	<button id= "person" class = "btn individualWidth">INDIVIDUAL</button>
+        <div>
+            <button id= "stats" >See web statistics</button>
+        </div>
+        <div id="personcontainer">
+      	<button id= "person">INDIVIDUAL</button>
+        </div>
 
       	<div class="controls cf">
 	        <div class="control search">
@@ -64,7 +67,7 @@
     </section>
 
 <footer>
-    <div><img src="/_img/GEIR-BIL@476x248.png" alt="GEIR logo"></div>
+    <div><img src="_img/GEIR-BIL@476x248.png" alt="GEIR logo"></div>
 </footer>
     <!-- ---------------------------- JAVASCRIPT SOURCES -------------------------------- -->
     <script src="src/web-animations-2.3.1.min.js"></script>

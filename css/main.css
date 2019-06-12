@@ -60,35 +60,59 @@ a:hover {
 }
 
 /* ------------------- Content -------------------- */
-.rcorners {
+/*.rcorners {
   border-radius: 25px;
   font-size: 12px;
   border: 2px solid #000000;
   padding: 20px;
   width: 100%;
-  height: relative;
-}
+  height: relative;*/ /* Removed by CRz
+}*/
 
 /* ------------------- Buttons -------------------- */
-.individualWidth{
+/*.individualWidth{
   width:100%;
+}*/ /* deleted by CRz */
+#stats{
+    background: #303e48;
+    color:#fff;
+    font-weight: 700;
+    border:none;
+    padding: 1em 0;
+    width:200px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#stats:hover{
+    background-color:#4a5e6d;
+}
+#webStats{
+    background: #4d5b65;
+    font-weight: 300 !important;
+    color: #fff;
+    padding:15px;
 }
 
-.btn {
+#webStats b, #webStats u{
+    font-weight: 300;
+    text-decoration: none;
+
+}
+#personcontainer{
+    width:100%;
+    text-align:center;
+}
+#person{
+  margin 0 auto;
   display: inline-block;
   position: relative;
-  vertical-align: top;
-  margin: 0;
   border: 0;
   outline: 0;
   padding: 0px 15px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 40px;
-  height: 40px;
+  font-weight: 700;
   text-align: center;
   white-space: nowrap;
-  background: #4a9ff9;
+  background: #ef4144;
   color: #fff;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
@@ -97,7 +121,10 @@ a:hover {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-radius: 3px;
+  padding:15px;}
+
+#person:hover{
+    background-color: #fe5b5d
 }
 .btn:focus,
 .btn:hover,
@@ -194,111 +221,7 @@ header h1 span{
 font-weight: 700 !important;
 }
 
-header h2 {
-  text-align: center;
-  font-size: 24px;
-  line-height: 1.5;
-  font-weight: 400;
-  max-width: 940px;
-  margin: 0 auto;
-  color: #6e6e6e;
-}
-header h2 > span {
-  display: block;
-  font-size: 18px;
-  color: #aaa;
-  margin-top: 3px;
-}
-header h2 > span > i {
-  margin: 0 10px;
-  color: #ccc;
-}
-header aside {
-  color: #bbb;
-  font-size: 15px;
-  margin-top: 5px;
-  font-style: italic;
-  text-align: center;
-}
-header nav {
-  text-align: center;
-}
-header nav a {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  padding: 20px;
-  font-size: 20px;
-  font-weight: 400;
-}
-header nav a i {
-  display: block;
-  position: absolute;
-  height: 2px;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background-color: #FF4BD8;
-  opacity: 0;
-  z-index: 2;
-  -moz-transform: scale(0, 1);
-  -webkit-transform: scale(0, 1);
-  -o-transform: scale(0, 1);
-  -ms-transform: scale(0, 1);
-  transform: scale(0, 1);
-  -webkit-transition: -webkit-transform 0.2s ease-out, opacity 0s ease 0.2s;
-  -moz-transition: -moz-transform 0.2s ease-out, opacity 0s ease 0.2s;
-  -ms-transition: -ms-transform 0.2s ease-out, opacity 0s ease 0.2s;
-  -o-transition: -o-transform 0.2s ease-out, opacity 0s ease 0.2s;
-  transition: transform 0.2s ease-out, opacity 0s ease 0.2s;
-}
-header nav a:hover i {
-  opacity: 1;
-  -moz-transform: scale(1, 1);
-  -webkit-transform: scale(1, 1);
-  -o-transform: scale(1, 1);
-  -ms-transform: scale(1, 1);
-  transform: scale(1, 1);
-  -webkit-transition: -webkit-transform 0.2s ease-out, opacity 0s ease 0s;
-  -moz-transition: -moz-transform 0.2s ease-out, opacity 0s ease 0s;
-  -ms-transition: -ms-transform 0.2s ease-out, opacity 0s ease 0s;
-  -o-transition: -o-transform 0.2s ease-out, opacity 0s ease 0s;
-  transition: transform 0.2s ease-out, opacity 0s ease 0s;
-}
-@media (max-width: 600px) {
-  header {
-    margin-bottom: 0;
-  }
-  header h2 {
-    font-size: 21px;
-  }
-  header h2 > span {
-    margin-top: 20px;
-  }
-  header h2 > span > i {
-    display: none;
-  }
-  header h2 > span > span {
-    display: block;
-  }
-  header nav {
-    margin-top: 20px;
-    border-bottom: 0;
-    border-top: 1px solid #e5e5e5;
-  }
-  header nav a {
-    display: block;
-    vertical-align: top;
-    padding: 10px 20px;
-    border-bottom: 1px solid #e5e5e5;
-  }
-  header nav a i {
-    bottom: -1px;
-    left: 0;
-    right: 0;
-  }
-}
+
 
 /* --------------- Footer ----------------- */
 
@@ -310,21 +233,7 @@ footer {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-footer p {
-  margin: 0;
-}
-footer .credits {
-  color: #aaa;
-  margin-bottom: 5px;
-  font-style: italic;
-}
-footer .copyright i {
-  font-size: 24px;
-  height: 27px;
-  line-height: 32px;
-  display: inline-block;
-  vertical-align: top;
-}
+footer img{max-width:200px;}
 
 /* --------------- Sections ---------------- */
 
@@ -334,6 +243,12 @@ section {
   max-width: 940px;
 
   text-align: left;
+}
+section h2{
+    font-size:1.35em;
+    text-transform: uppercase;
+    text-align:center;
+
 }
 section.demo {
   margin-top: 30px;
@@ -352,7 +267,7 @@ section h4 {
 
 /* ----------- Section titles -------------- */
 
-.section-title {
+/*.section-title {
   color: #3e3e3e;
   font-size: 26px;
   font-weight: 700;
@@ -374,7 +289,7 @@ section h4 {
   bottom: 0;
   right: 10px;
   height: 2px;
-  background: #3e3e3e;
+  background: #3e3e3e;*/ /* removed by CRz */
 }
 
 /* ------------- Feature list ---------------*/
