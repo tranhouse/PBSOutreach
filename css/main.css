@@ -19,11 +19,12 @@ html.dragging body {
 }
 body {
   position: relative;
-  font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
-  margin: 0 20px;
-  color: #6e6e6e;
+  font-family: 'Roboto Condensed', sans-serif; /* PBS font - CRz */
+  font-size: 16px;
+  font-weight: 300;
+  /* line-height: 1.5; */ /* CRz */
+  color: #303e48; /* PBS main text color */
+  margin:0; padding: 0;
 }
 a {
   color: #3396FF;
@@ -63,9 +64,9 @@ a:hover {
   border-radius: 25px;
   font-size: 12px;
   border: 2px solid #000000;
-  padding: 20px; 
+  padding: 20px;
   width: 100%;
-  height: relative;  
+  height: relative;
 }
 
 /* ------------------- Buttons -------------------- */
@@ -163,8 +164,10 @@ select.form-control::-ms-expand {
 /*------------------------- Header ---------------------------- */
 
 header {
-  margin: 30px auto;
-  max-width: 940px;
+    background: #2d363e;
+  padding: 30px auto;
+  text-align: center;
+  color: #fff;
 }
 header .logo {
   max-width: 240px;
@@ -175,8 +178,22 @@ header .logo svg {
   height: 100%;
 }
 header h1 {
-  display: none;
+display: inline-block;
+font-size:1.5em;
+font-weight: 300;
+text-transform: uppercase;
+text-align: left;
 }
+header h1:first-of-type{
+    border-right: 1px solid #303e48;
+    padding-right: 1.5em;}
+header h1:last-of-type{
+    padding-left:1.5em;
+}
+header h1 span{
+font-weight: 700 !important;
+}
+
 header h2 {
   text-align: center;
   font-size: 24px;
@@ -312,10 +329,10 @@ footer .copyright i {
 /* --------------- Sections ---------------- */
 
 section {
-  margin: 60px auto;
+  margin: 30px auto;
   padding-top: 0;
   max-width: 940px;
-  border-top: 2px solid #e5e5e5;
+
   text-align: left;
 }
 section.demo {
