@@ -159,8 +159,17 @@ document.addEventListener('DOMContentLoaded', function () {
                                       topRank[4][0] + ' : ' + topRank[4][1] + '<br />';
         } //end if
 
-        if(this.id =='summary'){
-          for(i=0; i<eventCat.length; i++){
+        if(this.id =='summary'){          
+          document.write("<b><u>Number of People Spoken to:</u></b>"          + personCount);
+          document.write("<br>");
+
+          document.write("<b><u>Number of Questions Asked in Total:</u></b>"  + questPerPerson.reduce(getSum));
+          document.write("<br>");
+
+          document.write("<b><u>Average Questions per Person:</u></b>"        + Math.round(averageQuestions *100)/100);
+          document.write("<br><br>");
+
+          for(i=0; i<eventCat.length; i++){ 
             document.write(masterCount[i][0] + "&nbsp - &nbsp" + masterCount[i][1]);
             document.write("<br>");
           }
