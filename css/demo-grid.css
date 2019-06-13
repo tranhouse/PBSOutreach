@@ -123,9 +123,12 @@ input::-ms-input-placeholder { /* Microsoft Edge */
   position: absolute;
   width: 100px;
   height: 100px;
-  line-height: 100px;
+ /* line-height: 100px;*/
   margin: 10px;
   z-index: 1;
+}
+.item:nth-child(4n+4){
+    margin-right:0;
 }
 .item.muuri-item-positioning {
   z-index: 2;
@@ -144,8 +147,19 @@ input::-ms-input-placeholder { /* Microsoft Edge */
   height: 120px; /*CRZ -- Rectangular (Was 220)*/
   line-height: 120px; /*CRZ -- Rectangular*/
 }
+
 .item.w2 {
-  width:196px;
+  width:22.5%;
+}
+@media screen and (max-width: 850px) {
+.item.w2 { width:30.5%;}
+.item:nth-child(4n+4){ margin-right:10px;}
+.item:nth-child(3n+3){ margin-right:0px;}
+}
+@media screen and (max-width: 680px) {
+.item.w2 { width:45%;}
+.item:nth-child(4n+4){ margin-right:10px;}
+.item:nth-child(3n+3){ margin-right:10px;}
 }
 .item-content {
   position: relative;
@@ -174,7 +188,7 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 }
 
 .card-title{
-font-size:1.5em;
+font-size:1.3em;
   background: inherit;
   background-clip: text;
   color: rgba(255, 255, 255);
