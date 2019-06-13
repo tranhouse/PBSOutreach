@@ -2,14 +2,16 @@
 /* Controls */
 
 .controls {
-  margin: 30px -10px;
+    width:100%;
+  margin: 30px 0;
 }
 .control {
   position: relative;
+  display:inline-block;
+  width: 47%;
+  padding: 0;
+  margin-right:7%;
 
-  float: left;
-  width: 100%;
-  padding: 0 10px;
 }
 @media (max-width: 600px) {
   .control {
@@ -32,6 +34,79 @@
   z-index: 2;
   pointer-events: none;
 }
+.add-tile-container{
+    display:inline-block;
+    width:47%; margin-right:-2%;
+
+}
+input[type=text], select {
+font-family: 'Roboto Condensed', sans-serif;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+input#newTileName{
+    /*background: #d5bd71;*/
+    display: inline-block;
+    max-width:74%;
+    font-weight:700;
+    font-size:1em;
+    text-align:left;
+   /* border: 2px solid #d3ae37;;*/
+    color:#000;
+    margin 0;
+    padding: 10px 10px 9px;
+    border-bottom: 1px solid #303e48;
+    outline: none;
+}
+button.add-more-items{
+    background: #303e48;
+    display: inline-block;
+    color:#fff;
+    border:none;
+    font-size:1.5em;
+    box-sizing:border-box;
+    margin-left:-3px;
+     vertical-align: middle;
+     margin-bottom:4px;
+     max-width:25%;
+     padding: 6px 10px;
+     cursor: pointer;
+     outline: none;
+}
+button.add-more-items:hover{background-color:#4a5e6d;}
+input.search-field {
+  /*background:#92adb6;*/
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-bottom: 1px solid #303e48;;
+  border-radius: 0;
+  box-sizing: border-box;
+  text-align: left;
+  color:#303e48 !important;
+  font-weight: 700;
+}
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:#303e48;
+  opacity: 1; /* Firefox */
+  font-weight: 700;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #303e48;
+}
+input::-ms-input-placeholder { /* Microsoft Edge */
+  color: #303e48;
+}
+
+
+
 
 
 /* Grid */
@@ -66,16 +141,16 @@
   z-index: 0;
 }
 .item.h2 {
-  height: 220px;
-  line-height: 220px;
+  height: 120px; /*CRZ -- Rectangular (Was 220)*/
+  line-height: 120px; /*CRZ -- Rectangular*/
 }
 .item.w2 {
-  width: 220px;
+  width:196px;
 }
 .item-content {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 50%;
 }
 .card {
   position: absolute;
@@ -86,7 +161,8 @@
   text-align: center;
   word-wrap: break-word;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
+
   border: none;
   color: #333;
   /* border-radius: 4px; */ /* CRz */
@@ -101,7 +177,7 @@
 font-size:1.5em;
   background: inherit;
   background-clip: text;
-  color: #fff;
+  color: rgba(255, 255, 255);
   word-wrap: break-word;
 
 }
@@ -116,35 +192,35 @@ font-size:1.5em;
 .item.GEIRColor7 .card { background-color:rgba(173, 52, 62, 1);}
 .item.GEIRColor8 .card { background-color:rgba(71, 71, 71, 1);}
 .item.GEIRColor9 .card { background-color:rgba(0, 0, 0, 1);}
-.item.GEIRColor10 .card { background-color:rgba(224, 224, 206, 1);}
-.item.GEIRColor11 .card { background-color:rgba(36, 90, 102, 1);}
+.item.GEIRColor10 .card { background-color:rgba(223, 54, 124, 1);}
+.item.GEIRColor11 .card { background-color:rgb(46, 111, 126);}
 .item.GEIRColor12 .card { background-color:rgba(148, 232, 180, 1);}
 .item.GEIRColor13 .card { background-color:rgba(114, 189, 163, 1);}
 .item.GEIRColor14 .card { background-color:rgba(94, 140, 97, 1);}
 .item.GEIRColor15 .card { background-color:rgba(59, 50, 44, 1);}
-.item.GEIRColor16 .card { background-color:rgba(36, 90, 102, 1);}
+.item.GEIRColor16 .card { background-color:rgb(29, 69, 78);}
 .item.GEIRColor17 .card { background-color:rgba(20, 8, 14, 1);}
 .item.GEIRColor18 .card { background-color:rgba(121, 148, 150, 1);}
 .item.GEIRColor19 .card { background-color:rgba(172, 193, 150, 1);}
-.item.GEIRColor20 .card { background-color:rgba(233, 235, 158, 1);}
+.item.GEIRColor20 .card { background-color:rgb(154, 156, 93);}
 .item.GEIRColor21 .card { background-color:rgba(36, 90, 102, 1);}
 .item.GEIRColor22 .card { background-color:rgba(93, 78, 109, 1);}
 .item.GEIRColor23 .card { background-color:rgba(143, 169, 152, 1);}
 .item.GEIRColor24 .card { background-color:rgba(156, 191, 167, 1);}
-.item.GEIRColor25 .card { background-color:rgba(201, 242, 153, 1);}
+.item.GEIRColor25 .card { background-color:rgb(114, 151, 72);}
 .item.GEIRColor26 .card { background-color:rgba(239, 65, 68, 1);}
 .item.GEIRColor27 .card { background-color:rgba(193, 193, 193, 1);}
 .item.GEIRColor28 .card { background-color:rgba(44, 66, 81, 1);}
 .item.GEIRColor29 .card { background-color:rgba(182, 198, 73, 1);}
-.item.GEIRColor30 .card { background-color:rgba(255, 255, 255, 1);}
-.item.GEIRColor31 .card { background-color:rgba(239, 65, 68, 1);}
+.item.GEIRColor30 .card { background-color:rgb(127, 69, 134);}
+.item.GEIRColor31 .card { background-color:rgb(150, 44, 46);}
 .item.GEIRColor32 .card { background-color:rgba(243, 141, 104, 1);}
 .item.GEIRColor33 .card { background-color:rgba(102, 44, 145, 1);}
 .item.GEIRColor34 .card { background-color:rgba(23, 163, 152, 1);}
 .item.GEIRColor35 .card { background-color:rgba(51, 49, 46, 1);}
-.item.GEIRColor36 .card { background-color:rgba(239, 65, 68, 1);}
+.item.GEIRColor36 .card { background-color:rgb(156, 48, 90);}
 .item.GEIRColor37 .card { background-color:rgba(38, 70, 83, 1);}
-.item.GEIRColor38 .card { background-color:rgba(42, 157, 143, 1);}
+.item.GEIRColor38 .card { background-color:rgb(33, 100, 92);}
 .item.GEIRColor39 .card { background-color:rgba(233, 196, 106, 1);}
 .item.GEIRColor40 .card { background-color:rgba(244, 162, 97, 1);}
 .item.GEIRColor41 .card { background-color:rgba(239, 65, 68, 1);}
@@ -247,7 +323,8 @@ font-size:1.5em;
   line-height: 30px;
   text-align: left;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
+  color: rgb(0, 0, 0, 0.7)
 }
 .card-remove {
   position: absolute;
@@ -284,7 +361,7 @@ font-size:1.5em;
 
 .grid-footer {
   margin: 60px 0;
-  text-align: center;
+  text-align: left;
 }
 
 .grid-footer .btn .material-icons {
@@ -292,13 +369,3 @@ font-size:1.5em;
   font-size: 24px;
 }
 
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  text-align: center;
-}

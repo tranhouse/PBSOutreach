@@ -41,24 +41,23 @@
         <div>
             <button id= "stats" >See web statistics</button>
         </div>
-        <div id="personcontainer">
-      	<button id= "person">INDIVIDUAL</button>
-        </div>
 
+    <!-- ----------------------- SEARCH & ADD TILE --------------------------------- -->
       	<div class="controls cf">
 	        <div class="control search">
-	          <input class="control-field search-field form-control " type="text" name="search" placeholder="Search..." />
+	            <input class="control-field search-field form-control " type="text" name="search" placeholder="Search..." />
 	        </div>
- 		   </div>
+            <div class="add-tile-container">
+                <input type="text" id = "newTileName" name="newTileName" placeholder="TYPE NEW CATEGORY HERE...">
+                <button class="add-more-items btn btn-primary"><i class="material-icons">&#xE145;</i>ADD</button>
+            </div>
+ 		</div>
+
 
       <!-- ----------------------- CREATE TILES ------------------------------------ -->
       <div class="grid"></div>
 
-      <!-- ----------------------- FOOTER ADD TILE --------------------------------- -->
-      <div class="grid-footer">
-        <input type="text" id = "newTileName" name="newTileName" placeholder="TYPE NEW CATEGORY HERE..."><br>
-        <button class="add-more-items btn btn-primary"><i class="material-icons">&#xE145;</i>Add more items</button>
-      </div>
+
 
       <div class="summary">
         <button id= "summary" class = "btn individualWidth">SUMMARY</button>
@@ -69,6 +68,9 @@
 <footer>
     <div><img src="_img/GEIR-BIL@476x248.png" alt="GEIR logo"></div>
 </footer>
+<div id="personcontainer">
+      	<button id= "person">INDIVIDUAL</button>
+        </div>
     <!-- ---------------------------- JAVASCRIPT SOURCES -------------------------------- -->
     <script src="src/web-animations-2.3.1.min.js"></script>
     <script src="src/hammer-2.0.8.min.js"></script>
