@@ -104,137 +104,139 @@
   word-wrap: break-word;
 
 }
+/* https://coolors.co/ */ /* crZ */
 
-.item.maroon .card { background-color:#800000}
-.item.red .card { background-color:#ff0000}
-.item.purple .card { background-color:#800080}
-.item.fuchsia .card { background-color:#ff00ff}
-.item.green .card { background-color:#008000}
-.item.lime .card { background-color:#00ff00}
-.item.olive .card { background-color:#808000}
-.item.yellow .card { background-color:#ffff00}
-.item.teal .card { background-color:#008080}
-.item.aqua .card { background-color:#00ffff}
-.item.orange .card { background-color:#ffa500}
-.item.aliceblue .card { background-color:#f0f8ff}
-.item.antiquewhite .card { background-color:#faebd7}
-.item.aquamarine .card { background-color:#7fffd4}
-.item.blueviolet .card { background-color:#8a2be2}
-.item.brown .card { background-color:#a52a2a}
-.item.burlywood .card { background-color:#deb887}
-.item.cadetblue .card { background-color:#5f9ea0}
-.item.chartreuse .card { background-color:#7fff00}
-.item.chocolate .card { background-color:#d2691e}
-.item.coral .card { background-color:#ff7f50}
-.item.cornflowerblue .card { background-color:#6495ed}
-.item.cornsilk .card { background-color:#fff8dc}
-.item.crimson .card { background-color:#dc143c}
-.item.cyan .card { background-color:#00ffff}
-.item.darkcyan .card { background-color:#008b8b}
-.item.darkgoldenrod .card { background-color:#b8860b}
-.item.darkgreen .card { background-color:#006400}
-.item.darkkhaki .card { background-color:#bdb76b}
-.item.darkmagenta .card { background-color:#8b008b}
-.item.darkolivegreen .card { background-color:#556b2f}
-.item.darkorange .card { background-color:#ff8c00}
-.item.darkorchid .card { background-color:#9932cc}
-.item.darkred .card { background-color:#8b0000}
-.item.darksalmon .card { background-color:#e9967a}
-.item.darkseagreen .card { background-color:#8fbc8f}
-.item.darkslateblue .card { background-color:#483d8b}
-.item.darkslategrey .card { background-color:#2f4f4f}
-.item.darkturquoise .card { background-color:#00ced1}
-.item.darkviolet .card { background-color:#9400d3}
-.item.deeppink .card { background-color:#ff1493}
-.item.deepskyblue .card { background-color:#00bfff}
-.item.dodgerblue .card { background-color:#1e90ff}
-.item.firebrick .card { background-color:#b22222}
-.item.floralwhite .card { background-color:#fffaf0}
-.item.forestgreen .card { background-color:#228b22}
-.item.gainsboro .card { background-color:#dcdcdc}
-.item.ghostwhite .card { background-color:#f8f8ff}
-.item.gold .card { background-color:#ffd700}
-.item.goldenrod .card { background-color:#daa520}
-.item.greenyellow .card { background-color:#adff2f}
-.item.grey .card { background-color:#808080}
-.item.honeydew .card { background-color:#f0fff0}
-.item.hotpink .card { background-color:#ff69b4}
-.item.indianred .card { background-color:#cd5c5c}
-.item.indigo .card { background-color:#4b0082}
-.item.khaki .card { background-color:#f0e68c}
-.item.lavender .card { background-color:#e6e6fa}
-.item.lavenderblush .card { background-color:#fff0f5}
-.item.lawngreen .card { background-color:#7cfc00}
-.item.lemonchiffon .card { background-color:#fffacd}
-.item.lightblue .card { background-color:#add8e6}
-.item.lightcoral .card { background-color:#f08080}
-.item.lightcyan .card { background-color:#e0ffff}
-.item.lightgoldenrodyellow .card { background-color:#fafad2}
-.item.lightgray .card { background-color:#d3d3d3}
-.item.lightgreen .card { background-color:#90ee90}
-.item.lightgrey .card { background-color:#d3d3d3}
-.item.lightpink .card { background-color:#ffb6c1}
-.item.lightsalmon .card { background-color:#ffa07a}
-.item.lightseagreen .card { background-color:#20b2aa}
-.item.lightskyblue .card { background-color:#87cefa}
-.item.lightslategray .card { background-color:#778899}
-.item.lightslategrey .card { background-color:#778899}
-.item.lightsteelblue .card { background-color:#b0c4de}
-.item.lightyellow .card { background-color:#ffffe0}
-.item.limegreen .card { background-color:#32cd32}
-.item.linen .card { background-color:#faf0e6}
-.item.magenta .card { background-color:#ff00ff}
-.item.mediumaquamarine .card { background-color:#66cdaa}
-.item.mediumblue .card { background-color:#0000cd}
-.item.mediumorchid .card { background-color:#ba55d3}
-.item.mediumpurple .card { background-color:#9370db}
-.item.mediumseagreen .card { background-color:#3cb371}
-.item.mediumslateblue .card { background-color:#7b68ee}
-.item.mediumspringgreen .card { background-color:#00fa9a}
-.item.mediumturquoise .card { background-color:#48d1cc}
-.item.mediumvioletred .card { background-color:#c71585}
-.item.midnightblue .card { background-color:#191970}
-.item.mintcream .card { background-color:#f5fffa}
-.item.mistyrose .card { background-color:#ffe4e1}
-.item.moccasin .card { background-color:#ffe4b5}
-.item.navajowhite .card { background-color:#ffdead}
-.item.oldlace .card { background-color:#fdf5e6}
-.item.olivedrab .card { background-color:#6b8e23}
-.item.orangered .card { background-color:#ff4500}
-.item.orchid .card { background-color:#da70d6}
-.item.palegoldenrod .card { background-color:#eee8aa}
-.item.palegreen .card { background-color:#98fb98}
-.item.paleturquoise .card { background-color:#afeeee}
-.item.palevioletred .card { background-color:#db7093}
-.item.papayawhip .card { background-color:#ffefd5}
-.item.peachpuff .card { background-color:#ffdab9}
-.item.peru .card { background-color:#cd853f}
-.item.pink .card { background-color:#ffc0cb}
-.item.plum .card { background-color:#dda0dd}
-.item.powderblue .card { background-color:#b0e0e6}
-.item.rosybrown .card { background-color:#bc8f8f}
-.item.royalblue .card { background-color:#4169e1}
-.item.saddlebrown .card { background-color:#8b4513}
-.item.salmon .card { background-color:#fa8072}
-.item.sandybrown .card { background-color:#f4a460}
-.item.seagreen .card { background-color:#2e8b57}
-.item.seashell .card { background-color:#fff5ee}
-.item.sienna .card { background-color:#a0522d}
-.item.skyblue .card { background-color:#87ceeb}
-.item.slateblue .card { background-color:#6a5acd}
-.item.slategray .card { background-color:#708090}
-.item.slategrey .card { background-color:#708090}
-.item.snow .card { background-color:#fffafa}
-.item.springgreen .card { background-color:#00ff7f}
-.item.steelblue .card { background-color:#4682b4}
-.item.tan .card { background-color:#d2b48c}
-.item.thistle .card { background-color:#d8bfd8}
-.item.tomato .card { background-color:#ff6347}
-.item.turquoise .card { background-color:#40e0d0}
-.item.violet .card { background-color:#ee82ee}
-.item.wheat .card { background-color:#f5deb3}
-.item.yellowgreen .card { background-color:#9acd32}
+.item.maroon .card { background-color: rgba(142, 137, 186, 1);}
+.item.red .card { background-color:rgba(44, 48, 46, 1);}
+.item.purple .card { background-color:rgba(71, 74, 72, 1);}
+.item.fuchsia .card { background-color:rgba(154, 225, 157, 1);}
+.item.green .card { background-color:rgba(83, 122, 90, 1);}
+.item.lime .card { background-color:rgba(211, 174, 55, 1);}
+.item.olive .card { background-color:rgba(173, 52, 62, 1);}
+.item.yellow .card { background-color:rgba(71, 71, 71, 1);}
+.item.teal .card { background-color:rgba(0, 0, 0, 1);}
+.item.aqua .card { background-color:rgba(224, 224, 206, 1);}
+.item.orange .card { background-color:rgba(36, 90, 102, 1);}
+.item.aliceblue .card { background-color:rgba(148, 232, 180, 1);}
+.item.antiquewhite .card { background-color:rgba(114, 189, 163, 1);}
+.item.aquamarine .card { background-color:rgba(94, 140, 97, 1);}
+.item.blueviolet .card { background-color:rgba(59, 50, 44, 1);}
+.item.brown .card { background-color:rgba(36, 90, 102, 1);}
+.item.burlywood .card { background-color:rgba(20, 8, 14, 1);}
+.item.cadetblue .card { background-color:rgba(121, 148, 150, 1);}
+.item.chartreuse .card { background-color:rgba(172, 193, 150, 1);}
+.item.chocolate .card { background-color:rgba(233, 235, 158, 1);}
+.item.coral .card { background-color:rgba(36, 90, 102, 1);}
+.item.cornflowerblue .card { background-color:rgba(93, 78, 109, 1);}
+.item.cornsilk .card { background-color:rgba(143, 169, 152, 1);}
+.item.crimson .card { background-color:rgba(156, 191, 167, 1);}
+.item.cyan .card { background-color:rgba(201, 242, 153, 1);}
+.item.darkcyan .card { background-color:rgba(239, 65, 68, 1);}
+.item.darkgoldenrod .card { background-color:rgba(193, 193, 193, 1);}
+.item.darkgreen .card { background-color:rgba(44, 66, 81, 1);}
+.item.darkkhaki .card { background-color:rgba(182, 198, 73, 1);}
+.item.darkmagenta .card { background-color:rgba(255, 255, 255, 1);}
+.item.darkolivegreen .card { background-color:rgba(239, 65, 68, 1);}
+.item.darkorange .card { background-color:rgba(243, 141, 104, 1);}
+.item.darkorchid .card { background-color:rgba(102, 44, 145, 1);}
+.item.darkred .card { background-color:rgba(23, 163, 152, 1);}
+.item.darksalmon .card { background-color:rgba(51, 49, 46, 1);}
+.item.darkseagreen .card { background-color:rgba(239, 65, 68, 1);}
+.item.darkslateblue .card { background-color:rgba(38, 70, 83, 1);}
+.item.darkslategrey .card { background-color:rgba(42, 157, 143, 1);}
+.item.darkturquoise .card { background-color:rgba(233, 196, 106, 1);}
+.item.darkviolet .card { background-color:rgba(244, 162, 97, 1);}
+.item.deeppink .card { background-color:rgba(239, 65, 68, 1);}
+.item.deepskyblue .card { background-color:rgba(73, 88, 103, 1);}
+.item.dodgerblue .card { background-color:rgba(87, 115, 153, 1);}
+.item.firebrick .card { background-color:rgba(189, 213, 234, 1);}
+.item.floralwhite .card { background-color:rgba(247, 247, 255, 1);}
+.item.forestgreen .card { background-color:rgba(239, 65, 68, 1);}
+.item.gainsboro .card { background-color:rgba(23, 190, 187, 1);}
+.item.ghostwhite .card { background-color:rgba(46, 40, 42, 1);}
+.item.gold .card { background-color:rgba(237, 184, 139, 1);}
+.item.goldenrod .card { background-color:rgba(250, 216, 214, 1);}
+.item.greenyellow .card { background-color:rgba(239, 65, 68, 1);}
+.item.grey .card { background-color:rgba(102, 153, 204, 1);}
+.item.honeydew .card { background-color:rgba(255, 242, 117, 1);}
+.item.hotpink .card { background-color:rgba(255, 140, 66, 1);}
+.item.indianred .card { background-color:rgba(162, 62, 72, 1);}
+.item.indigo .card { background-color:rgba(239, 65, 68, 1);}
+.item.khaki .card { background-color:rgba(255, 77, 128, 1);}
+.item.lavender .card { background-color:rgba(223, 54, 124, 1);}
+.item.lavenderblush .card { background-color:rgba(136, 57, 85, 1);}
+.item.lawngreen .card { background-color:rgba(76, 53, 73, 1);}
+.item.lemonchiffon .card { background-color:rgba(239, 65, 68, 1);}
+.item.lightblue .card { background-color:rgba(12, 15, 10, 1);}
+.item.lightcoral .card { background-color:rgba(251, 255, 18, 1);}
+.item.lightcyan .card { background-color:rgba(65, 234, 212, 1);}
+.item.lightgoldenrodyellow .card { background-color:rgba(255, 255, 255, 1);}
+.item.lightgray .card { background-color:rgba(56, 150, 180, 1);}
+.item.lightgreen .card { background-color:rgba(113, 247, 159, 1);}
+.item.lightgrey .card { background-color:rgba(61, 214, 208, 1);}
+.item.lightpink .card { background-color:rgba(81, 60, 44, 1);}
+.item.lightsalmon .card { background-color:rgba(40, 25, 14, 1);}
+.item.lightseagreen .card { background-color:rgba(56, 150, 180, 1);}
+.item.lightskyblue .card { background-color:rgba(0, 110, 144, 1);}
+.item.lightslategray .card { background-color:rgba(241, 143, 1, 1);}
+.item.lightslategrey .card { background-color:rgba(173, 202, 214, 1);}
+.item.lightsteelblue .card { background-color:rgba(153, 194, 77, 1);}
+.item.lightyellow .card { background-color:rgba(56, 150, 180, 1);}
+.item.limegreen .card { background-color:rgba(68, 118, 4, 1);}
+.item.linen .card { background-color:rgba(108, 197, 81, 1);}
+.item.magenta .card { background-color:rgba(159, 252, 223, 1);}
+.item.mediumaquamarine .card { background-color:rgba(71, 98, 79, 1);}
+.item.mediumblue .card { background-color:rgba(173, 238, 227, 1);}
+.item.mediumorchid .card { background-color:rgba(4, 42, 43, 1);}
+.item.mediumpurple .card { background-color:rgba(84, 242, 242, 1);}
+.item.mediumseagreen .card { background-color:rgba(252, 252, 252, 1);}
+.item.mediumslateblue .card { background-color:rgba(244, 224, 77, 1);}
+.item.mediumspringgreen .card { background-color:rgba(134, 222, 183, 1);}
+.item.mediumturquoise .card { background-color:rgba(80, 114, 60, 1);}
+.item.mediumvioletred .card { background-color:rgba(66, 62, 40, 1);}
+.item.midnightblue .card { background-color:rgba(216, 221, 239, 1);}
+.item.mintcream .card { background-color:rgba(160, 164, 184, 1);}
+.item.mistyrose .card { background-color:rgba(114, 147, 160, 1);}
+.item.moccasin .card { background-color:rgba(33, 209, 159, 1);}
+.item.navajowhite .card { background-color:rgba(0, 114, 187, 1);}
+.item.oldlace .card { background-color:rgba(143, 201, 58, 1);}
+.item.olivedrab .card { background-color:rgba(228, 204, 55, 1);}
+.item.orangered .card { background-color:rgba(225, 131, 53, 1);}
+.item.orchid .card { background-color:rgba(92, 39, 81, 1);}
+.item.palegoldenrod .card { background-color:rgba(100, 87, 166, 1);}
+.item.palegreen .card { background-color:rgba(157, 172, 255, 1);}
+.item.paleturquoise .card { background-color:rgba(118, 229, 252, 1);}
+.item.palevioletred .card { background-color:rgba(201, 228, 202, 1);}
+.item.papayawhip .card { background-color:rgba(135, 187, 162, 1);}
+.item.peachpuff .card { background-color:rgba(59, 96, 100, 1);}
+.item.peru .card { background-color:rgba(54, 73, 88, 1);}
+.item.pink .card { background-color:rgba(41, 110, 131, 1);}
+.item.plum .card { background-color:rgba(72, 139, 73, 1);}
+.item.powderblue .card { background-color:rgba(74, 173, 82, 1);}
+.item.rosybrown .card { background-color:rgba(110, 178, 87, 1);}
+.item.royalblue .card { background-color:rgba(197, 224, 99, 1);}
+.item.saddlebrown .card { background-color:rgba(42, 43, 46, 1);}
+.item.salmon .card { background-color:rgba(164, 194, 168, 1);}
+.item.sandybrown .card { background-color:rgba(172, 235, 152, 1);}
+.item.seagreen .card { background-color:rgba(135, 255, 101, 1);}
+.item.seashell .card { background-color:rgba(49, 54, 40, 1);}
+.item.sienna .card { background-color:rgba(133, 127, 116, 1);}
+.item.skyblue .card { background-color:rgba(164, 172, 150, 1);}
+.item.slateblue .card { background-color:rgba(202, 223, 158, 1);}
+.item.slategray .card { background-color:rgba(149, 9, 82, 1);}
+.item.slategrey .card { background-color:rgba(94, 0, 53, 1);}
+.item.snow .card { background-color:rgba(2, 2, 2, 1);}
+.item.springgreen .card { background-color:rgba(2, 54, 24, 1);}
+.item.steelblue .card { background-color:rgba(129, 141, 146, 1);}
+.item.tan .card { background-color:rgba(185, 163, 148, 1);}
+.item.thistle .card { background-color:rgba(212, 197, 199, 1);}
+.item.tomato .card { background-color:rgba(218, 212, 239, 1);}
+.item.turquoise .card { background-color:rgba(184, 225, 255, 1);}
+.item.violet .card { background-color:rgba(169, 255, 247, 1);}
+.item.wheat .card { background-color:rgba(148, 251, 171, 1);}
+.item.yellowgreen .card { background-color:rgba(130, 171, 161, 1);}
 
+.item.white .card {background-color:#fff;}
 
 .card-id {
   position: absolute;

@@ -77,7 +77,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="src/grid.js"></script>
 
+    <script>
+       function isDark( color ) {
+    var match = /rgb\((\d+).*?(\d+).*?(\d+)\)/.exec(color);
+    return ( match[1] & 255 )
+         + ( match[2] & 255 )
+         + ( match[3] & 255 )
+           < 3 * 256 / 2;
+}
 
+$('.card').each(function() {console.log($(this).css("background-color"))
+    $(this).css("color", isDark($('.card-title').css("background-color")) ? 'white' : 'black');
+});
+    </script>
 </body>
 
 </html>
