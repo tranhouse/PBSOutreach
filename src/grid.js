@@ -10,33 +10,49 @@ document.addEventListener('DOMContentLoaded', function () {
   var gridElement = demo.querySelector('.grid');
   var searchField = demo.querySelector('.search-field');
   var addItemsElement = demo.querySelector('.add-more-items');
-  
+
   //Categories that have been established in the Event Outreach Program by GEIR
   //----------------------------------------------------------------------------------------------------------------------------------------
-  var eventCat = ['New to the PS','General', 'PIBS', 'Service Buyback','Plan Information', 'Married-Common Law', 'Disability', 'Parenthood', 
+  var eventCat = ['New to the PS','General', 'PIBS', 'Service Buyback','Plan Information', 'Married-Common Law', 'Disability', 'Parenthood',
                     'Divorce or Seperation', 'WFA-Terminating', 'Death', 'Working past 65', 'Plan Member Responsibilities', 'Preparing for Retirement',
                     'Contribution Rates','LWOP', 'Pension Transfer', 'Bridge Benefits', 'Newly Retired', 'Reaching 65', 'Re-employment', 'Indexing Rates', 'APS',
                     'Deferred Pension Plan', 'Web Tools', 'Surivor and Dependents', 'Pension Centre', 'Forms', 'Phoenix', 'CAF and RCMP',
                     'Eligibility', 'Pay Centre', 'Health Care Plan', 'Dental Care Plan', 'DI', 'PSMIP', 'EX Benefits', 'Living Outside Canada',
                     'Deferred Benefits Plan', 'Remarrying', 'Submit a Claim', 'Rates', 'Contact Info'];
   //----------------------------------------------------------------------------------------------------------------------------------------
-  
+
   //135 Unique colours array to choose from
   //----------------------------------------------------------------------------------------------------------------------------------------
-  var tileColours = ['maroon', 'red', 'purple', ' fuchsia', 'green', 'lime', 'olive', 'yellow', 'teal', 'aqua', 'orange', 'aliceblue', 
-  'antiquewhite', 'aquamarine', 'blueviolet', 'brown', 'burlywood', 'cadetblue', 'chartreuse', 'chocolate', 
-  'coral', 'cornflowerblue', 'cornsilk', 'crimson', 'cyan', 'darkcyan', 'darkgoldenrod', 'darkgreen', 'darkkhaki', 
-  'darkmagenta', 'darkolivegreen', 'darkorange', 'darkorchid', 'darkred', 'darksalmon', 'darkseagreen', 'darkslateblue', 'darkslategrey', 
-  'darkturquoise', 'darkviolet', 'deeppink', 'deepskyblue', 'dodgerblue', 'firebrick', 'floralwhite', 'forestgreen', 'gainsboro', 
-  'ghostwhite', 'gold', 'goldenrod', 'greenyellow', 'grey', 'honeydew', 'hotpink', 'indianred', 'indigo', 'khaki', 'lavender', 'lavenderblush', 
-  'lawngreen', 'lemonchiffon', 'lightblue', 'lightcoral', 'lightcyan', 'lightgoldenrodyellow', 'lightgray', 'lightgreen', 'lightgrey', 'lightpink', 
-  'lightsalmon', 'lightseagreen', 'lightskyblue', 'lightslategray', 'lightslategrey', 'lightsteelblue', 'lightyellow', 'limegreen', 'linen', 'magenta', 
-  'mediumaquamarine', 'mediumblue', 'mediumorchid', 'mediumpurple', 'mediumseagreen', 'mediumslateblue', 'mediumspringgreen', 'mediumturquoise', 
-  'mediumvioletred', 'midnightblue', 'mintcream', 'mistyrose', 'moccasin', 'navajowhite', 'oldlace', 'olivedrab', 'orangered', 'orchid', 'palegoldenrod', 
-  'palegreen', 'paleturquoise', 'palevioletred', 'papayawhip', 'peachpuff', 'peru', 'pink', 'plum', 'powderblue', 'rosybrown', 'royalblue', 'saddlebrown', 
-  'salmon', 'sandybrown', 'seagreen', 'seashell', 'sienna', 'skyblue', 'slateblue', 'slategray', 'slategrey', 'snow', 'springgreen', 'steelblue', 'tan', 
-  'thistle', 'tomato', 'turquoise', 'violet', 'wheat', 'yellowgreen'];
+  //-- CRZ : STD colors. - Implemented GEIR colors
+  /* var tileColours = ['maroon', 'red', 'purple', ' fuchsia', 'green', 'lime', 'olive', 'yellow', 'teal', 'aqua', 'orange', 'aliceblue',
+  'antiquewhite', 'aquamarine', 'blueviolet', 'brown', 'burlywood', 'cadetblue', 'chartreuse', 'chocolate',
+  'coral', 'cornflowerblue', 'cornsilk', 'crimson', 'cyan', 'darkcyan', 'darkgoldenrod', 'darkgreen', 'darkkhaki',
+  'darkmagenta', 'darkolivegreen', 'darkorange', 'darkorchid', 'darkred', 'darksalmon', 'darkseagreen', 'darkslateblue', 'darkslategrey',
+  'darkturquoise', 'darkviolet', 'deeppink', 'deepskyblue', 'dodgerblue', 'firebrick', 'floralwhite', 'forestgreen', 'gainsboro',
+  'ghostwhite', 'gold', 'goldenrod', 'greenyellow', 'grey', 'honeydew', 'hotpink', 'indianred', 'indigo', 'khaki', 'lavender', 'lavenderblush',
+  'lawngreen', 'lemonchiffon', 'lightblue', 'lightcoral', 'lightcyan', 'lightgoldenrodyellow', 'lightgray', 'lightgreen', 'lightgrey', 'lightpink',
+  'lightsalmon', 'lightseagreen', 'lightskyblue', 'lightslategray', 'lightslategrey', 'lightsteelblue', 'lightyellow', 'limegreen', 'linen', 'magenta',
+  'mediumaquamarine', 'mediumblue', 'mediumorchid', 'mediumpurple', 'mediumseagreen', 'mediumslateblue', 'mediumspringgreen', 'mediumturquoise',
+  'mediumvioletred', 'midnightblue', 'mintcream', 'mistyrose', 'moccasin', 'navajowhite', 'oldlace', 'olivedrab', 'orangered', 'orchid', 'palegoldenrod',
+  'palegreen', 'paleturquoise', 'palevioletred', 'papayawhip', 'peachpuff', 'peru', 'pink', 'plum', 'powderblue', 'rosybrown', 'royalblue', 'saddlebrown',
+  'salmon', 'sandybrown', 'seagreen', 'seashell', 'sienna', 'skyblue', 'slateblue', 'slategray', 'slategrey', 'snow', 'springgreen', 'steelblue', 'tan',
+  'thistle', 'tomato', 'turquoise', 'violet', 'wheat', 'yellowgreen']; */
   //----------------------------------------------------------------------------------------------------------------------------------------
+
+  //-- CRZ : Adding GEIR Colors :: defined in demo-grid.css
+    var tileColours = ['GEIRColor1', 'GEIRColor2', 'GEIRColor3', ' GEIRColor4', 'GEIRColor5', 'GEIRColor6', 'GEIRColor7', 'GEIRColor8', 'GEIRColor9', 'GEIRColor10', 'GEIRColor11', 'GEIRColor12',
+  'GEIRColor13', 'GEIRColor14', 'GEIRColor15', 'GEIRColor16', 'GEIRColor17', 'GEIRColor18', 'GEIRColor19', 'GEIRColor20',
+  'GEIRColor21', 'GEIRColor22', 'GEIRColor23', 'GEIRColor24', 'GEIRColor25', 'GEIRColor26', 'GEIRColor27', 'GEIRColor28', 'GEIRColor29',
+  'GEIRColor30', 'GEIRColor31', 'GEIRColor32', 'GEIRColor33', 'GEIRColor34', 'GEIRColor35', 'GEIRColor36', 'GEIRColor37', 'GEIRColor38',
+  'GEIRColor39', 'GEIRColor40', 'GEIRColor41', 'GEIRColor42', 'GEIRColor43', 'GEIRColor44', 'GEIRColor45', 'GEIRColor46', 'GEIRColor47',
+  'GEIRColor48', 'GEIRColor49', 'GEIRColor50', 'GEIRColor51', 'GEIRColor52', 'GEIRColor53', 'GEIRColor54', 'GEIRColor55', 'GEIRColor56', 'GEIRColor57', 'GEIRColor58', 'GEIRColor59',
+  'GEIRColor60', 'GEIRColor61', 'GEIRColor62', 'GEIRColor63', 'GEIRColor64', 'GEIRColor65', 'GEIRColor66', 'GEIRColor67', 'GEIRColor68', 'GEIRColor69',
+  'GEIRColor70', 'GEIRColor71', 'GEIRColor72', 'GEIRColor73', 'GEIRColor74', 'GEIRColor75', 'GEIRColor76', 'GEIRColor77', 'GEIRColor78', 'GEIRColor79',
+  'GEIRColor80', 'GEIRColor81', 'GEIRColor82', 'GEIRColor83', 'GEIRColor84', 'GEIRColor85', 'GEIRColor86', 'GEIRColor87',
+  'GEIRColor88', 'GEIRColor89', 'GEIRColor90', 'GEIRColor91', 'GEIRColor92', 'GEIRColor93', 'GEIRColor94', 'GEIRColor95', 'GEIRColor96', 'GEIRColor97', 'GEIRColor98',
+  'GEIRColor99', 'GEIRColor100', 'GEIRColor101', 'GEIRColor102', 'GEIRColor103', 'GEIRColor104', 'GEIRColor105', 'GEIRColor106', 'GEIRColor107', 'GEIRColor108', 'GEIRColor109', 'GEIRColor110',
+  'GEIRColor111', 'GEIRColor112', 'GEIRColor113', 'GEIRColor114', 'GEIRColor115', 'GEIRColor116', 'GEIRColor117', 'GEIRColor118', 'GEIRColor119', 'GEIRColor120', 'GEIRColor121', 'GEIRColor122', 'GEIRColor123',
+  'GEIRColor124', 'GEIRColor125', 'GEIRColor126', 'GEIRColor127', 'GEIRColor128', 'GEIRColor129'];
 
   var dragOrder = [];
   var uuid = 0;
@@ -58,14 +74,14 @@ document.addEventListener('DOMContentLoaded', function () {
   var totalQuestions = 0;           //Keeps track of the number of questions asked
   var masterCount = new Array();    //Keeps track of all the different questions asked
   var topRank   = new Array();      //Used to keep track of the top list of questions asked
-    
+
   //Creating a double array
     for(var i=0; i < eventCat.length; i++){
       masterCount[i]  = new Array(2);
       topRank[i]    = new Array(2);
     }
-  
-  //initalizing double array and assigning it the event categories 
+
+  //initalizing double array and assigning it the event categories
     for (var j=0; j< eventCat.length; j++){
       for (var k=0; k<2; k++){
         masterCount[j][0] = eventCat[j];
@@ -79,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
   //----------------------------------------------------------------------------------------------------------------------------------------
   function initDemo() {
 
-    initGrid();    
+    initGrid();
 
     // Set inital search query, active filter, active sort value and active layout.
     searchFieldValue = ''; //searchField.value.toLowerCase();
@@ -87,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
     sortFieldValue = 'order'; //sortField.value;
     layoutFieldValue = 'left-top'; //layoutField.value;
 
-    // Search field binding. 
+    // Search field binding.
     searchField.addEventListener('keyup', function () {
       var newSearch = searchField.value.toLowerCase();
       if (searchFieldValue !== newSearch) {
@@ -95,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
         filter();
       }
     });
-    
+
 
     // Add/remove items bindings.
     addItemsElement.addEventListener('click', addItems);
@@ -108,12 +124,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //------------- BUTTONS----------------------------
     $("button").click(function(){
-        
+
         //-------------- webstats menu ----------------
         if(this.id == 'stats'){
           $("#webStats").toggle();
         }
-    
+
       //---------- calculations of webstats -----------
         if(this.id == 'person'){
 
@@ -124,18 +140,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
           //Create a new copy of the Master
           topRank =  masterCount.slice();
-          
+
           //Calculate descending order of top questions asked
           topRank.sort(function(a,b){return b[1]-a[1]});
 
           //Reset each question from person
           quesCount   = 0;
-        
+
           //Update webstats divs
         document.getElementById("numPeople").innerHTML = '<b><u>Number of People Spoken to:</u></b> '       + personCount;
         document.getElementById("numQuestions").innerHTML = '<b><u>Number of Questions Asked in Total:</u></b> '  + questPerPerson.reduce(getSum);
         document.getElementById("avgQuestions").innerHTML = '<b><u>Average Questions per Person:</u></b> '      + Math.round(averageQuestions *100)/100;
-        document.getElementById("topQuestions").innerHTML = '<b><u>List of top 5:</u></b> <br/>'          +       
+        document.getElementById("topQuestions").innerHTML = '<b><u>List of top 5:</u></b> <br/>'          +
                                       topRank[0][0] + ' : ' + topRank[0][1] + '<br />' +
                                       topRank[1][0] + ' : ' + topRank[1][1] + '<br />' +
                                       topRank[2][0] + ' : ' + topRank[2][1] + '<br />' +
@@ -143,7 +159,9 @@ document.addEventListener('DOMContentLoaded', function () {
                                       topRank[4][0] + ' : ' + topRank[4][1] + '<br />';
         } //end if
 
-        if(this.id =='summary'){
+
+        if(this.id =='summary'){          
+
           document.write("<b><u>Number of People Spoken to:</u></b>"          + personCount);
           document.write("<br>");
 
@@ -171,18 +189,18 @@ document.addEventListener('DOMContentLoaded', function () {
           // make a jQ collection of the DOM element from the event
           var $elem = $(this);
           // change the background color to what you want
-          $elem.css('backgroundColor', '#FFFFFF');
+          $elem.css('opacity', '0');
           // after 1 second, change it back
           setTimeout(function() {
-            $elem.css('background-color', tileColours[index]);
-          }, 50);
+            $elem.css('opacity', '1');
+          }, 75);
 
         //After determining which tile was clicked, must subtract 1 to correspond to the array
-        
-        
+
+
         quesCount++;
         masterCount[index][1]++;
-      
+
       });
     }
 
@@ -238,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
   }
-  
+
   //----------------------------------------------------------------------------------------------------------------------------------------
   function sort() {
 
@@ -276,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     masterCount[catNewLength-1]   = new Array(2);
     topRank[catNewLength-1]       = new Array(2);
-   
+
     masterCount[catNewLength-1][0] = eventCat[catNewLength-1];
     masterCount[catNewLength-1][1] = 0;
 
@@ -323,7 +341,7 @@ document.addEventListener('DOMContentLoaded', function () {
         //After determining which tile was clicked, must subtract 1 to correspond to the array
         quesCount++;
         masterCount[index][1]++;
-      
+
     });
 
   }

@@ -8,7 +8,7 @@
     <meta name="description" content="PBS Outreach Event to determine Statistics">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="PBS">
-   
+
   <!-- --------------------------- CSS -------------------------- -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic">
@@ -20,56 +20,78 @@
   <body>
 
     <header>
-   		<h1>PBS</h1>
+   		<h1>Public service<br><span>pension and benefits</span></h1>
+
+        <h1><span>Pension et avantages sociaux</span><br>pension and benefits</h1>
     </header>
 
     <!-- ---------------------------- HTML TEMPLATE --------------------------------- -->
     <section class="grid-PBS">
 
-      <h2 class="section-title"><span>PBS Outreach Event</span></h2>
+      <h2 class="section-title"><span>Outreach Event Application</span></h2>
 
         <!-- ---------------------------- WEB STATS --------------------------------- -->
-        <div id="webStats" class="rcorners" hidden>
+        <div id="webStats" class="" hidden>
           <p id = "numPeople"> <b><u>Number of People Spoken to:</u></b> </p>
           <p id = "numQuestions"> <b><u>Number of Questions Asked:</u></b> </p>
           <p id = "avgQuestions"> <b><u>Average Questions per Person:</u></b> </p>
           <p id = "topQuestions"> <b><u>List of top 5:</u></b> </p>
         </div>
 
-        <button id= "stats" class = "individualWidth">WEB STATISTICS</button>
+        <div>
+            <button id= "stats" >See web statistics</button>
+        </div>
 
-      	<button id= "person" class = "btn individualWidth">INDIVIDUAL</button>
-      	
+    <!-- ----------------------- SEARCH & ADD TILE --------------------------------- -->
       	<div class="controls cf">
 	        <div class="control search">
-	          <input class="control-field search-field form-control " type="text" name="search" placeholder="Search..." />
+	            <input class="control-field search-field form-control " type="text" name="search" placeholder="Search..." />
 	        </div>
- 		   </div>
+            <div class="add-tile-container">
+                <input type="text" id = "newTileName" name="newTileName" placeholder="TYPE NEW CATEGORY HERE...">
+                <button class="add-more-items btn btn-primary"><i class="material-icons">&#xE145;</i>ADD</button>
+            </div>
+ 		</div>
+
 
       <!-- ----------------------- CREATE TILES ------------------------------------ -->
       <div class="grid"></div>
 
-      <!-- ----------------------- FOOTER ADD TILE --------------------------------- -->
-      <div class="grid-footer">
-        <input type="text" id = "newTileName" name="newTileName" placeholder="TYPE NEW CATEGORY HERE..."><br>
-        <button class="add-more-items btn btn-primary"><i class="material-icons">&#xE145;</i>Add more items</button>
-      </div>
+
 
       <div class="summary">
         <button id= "summary" class = "btn individualWidth">SUMMARY</button>
       </div>
-    
+
     </section>
 
+<footer>
+    <div><img src="_img/GEIR-BIL@476x248.png" alt="GEIR logo"></div>
+</footer>
+<div id="personcontainer">
+      	<button id= "person">INDIVIDUAL</button>
+        </div>
     <!-- ---------------------------- JAVASCRIPT SOURCES -------------------------------- -->
     <script src="src/web-animations-2.3.1.min.js"></script>
     <script src="src/hammer-2.0.8.min.js"></script>
     <script src="src/muuri.js"></script>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="src/grid.js"></script>
 
+    <script>
+       function isDark( color ) {
+    var match = /rgb\((\d+).*?(\d+).*?(\d+)\)/.exec(color);
+    return ( match[1] & 255 )
+         + ( match[2] & 255 )
+         + ( match[3] & 255 )
+           < 3 * 256 / 2;
+}
 
+$('.card').each(function() {console.log($(this).css("background-color"))
+    $(this).css("color", isDark($('.card-title').css("background-color")) ? 'white' : 'black');
+});
+    </script>
 </body>
 
 </html>
