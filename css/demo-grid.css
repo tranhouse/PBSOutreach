@@ -37,7 +37,14 @@
 .add-tile-container{
     display:inline-block;
     width:47%; margin-right:-2%;
-
+}
+@media screen and (max-width: 450px) {
+ .add-tile-container{
+    width:100%; margin-right:0;
+}
+.control {
+  width: 85%;
+  margin-right:0;
 }
 input[type=text], select {
 font-family: 'Roboto Condensed', sans-serif;
