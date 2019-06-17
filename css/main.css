@@ -127,7 +127,7 @@ a:hover {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  padding:3% 0;}
+  padding:20px 0;}
 
 #person:hover{
     background-color: #fe5b5d
