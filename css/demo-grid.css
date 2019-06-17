@@ -168,13 +168,20 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 .item.w2 { width:45%;}
 .item:nth-child(3n){ margin-right:10px;}
 .item:nth-child(2n){ margin-right:0;}
-
 }
 .item-content {
   position: relative;
   width: 200px; /* CRz-was 100% - fixed on click double sized  */
   line-height: 120px;/* CRz-was 50% - fixed on click double sized  */
 }
+
+@media screen and (max-width: 450px) {
+  .item.w2 { width:90%;}
+  .item.h2{ height: 70px; line-height: 120px;}
+  .item-content { line-height: 70px;}
+  .card-title{ width: 150%;}
+}
+
 .card {
   position: absolute;
   left: 0;
