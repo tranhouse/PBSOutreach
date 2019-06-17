@@ -136,9 +136,9 @@ input::-ms-input-placeholder { /* Microsoft Edge */
   margin: 10px;
   z-index: 1;
 }
-.item:nth-child(4n){
-    margin-right:0;
-}
+/*.item:nth-child(4n){
+    margin-right:0;*/
+
 .item.muuri-item-positioning {
   z-index: 2;
 }
@@ -162,13 +162,13 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 }
 @media screen and (max-width: 850px) {
 .item.w2 { width:30.5%;}
-.item:nth-child(4n){ margin-right:10px;}
-.item:nth-child(3n){ margin-right:0px;}
+/*.item:nth-child(4n){ margin-right:10px;}
+.item:nth-child(3n){ margin-right:0px;}*/
 }
 @media screen and (max-width: 680px) {
 .item.w2 { width:45%;}
-.item:nth-child(3n){ margin-right:10px;}
-.item:nth-child(2n){ margin-right:0;}
+/*.item:nth-child(3n){ margin-right:10px;}
+.item:nth-child(2n){ margin-right:0;}*/
 }
 .item-content {
   position: relative;
@@ -181,6 +181,11 @@ input::-ms-input-placeholder { /* Microsoft Edge */
   .item.h2{ height: 70px; line-height: 120px;}
   .item-content { line-height: 70px;}
   .card-title{ width: 150%;}
+  .card-remove {
+  position: absolute;
+  right: -100px !important;
+  top: 0;
+}
 }
 
 .card {
@@ -193,7 +198,6 @@ input::-ms-input-placeholder { /* Microsoft Edge */
   word-wrap: break-word;
   font-size: 13px;
   font-weight: 400;
-
   border: none;
   color: #333;
   /* border-radius: 4px; */ /* CRz */

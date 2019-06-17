@@ -236,6 +236,9 @@ header h1 {font-size:1em;}
 }
 @media screen and (max-width: 450px) {
 header h1 {font-size:.7em;}
+#person{
+    padding:30px 0;
+}
 }
 /*
 header h1:first-of-type{
@@ -260,7 +263,7 @@ footer {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-footer img{max-width:200px;}
+footer img{max-width:200px; }
 
 /* --------------- Sections ---------------- */
 
