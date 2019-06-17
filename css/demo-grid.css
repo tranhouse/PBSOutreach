@@ -42,6 +42,7 @@
  .add-tile-container{
     width:100%; margin-right:0;
 }
+}
 .control {
   width: 85%;
   margin-right:0;
@@ -200,7 +201,6 @@ font-size:1.3em;
   background-clip: text;
   color: rgba(255, 255, 255);
   word-wrap: break-word;
-
 }
 /* https://coolors.co/ */ /* crZ */
 
