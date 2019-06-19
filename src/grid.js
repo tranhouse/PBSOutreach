@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //Categories that have been established in the Event Outreach Program by GEIR
   //----------------------------------------------------------------------------------------------------------------------------------------
-  var eventCat = ['New to the PS','General', 'PIBS', 'Service Buyback','Plan Information', 'Married-Common Law', 'Disability', 'Parenthood',
+  var eventCat = ['SWAG', 'New to the PS','General', 'PIBS', 'Service Buyback','Plan Information', 'Married-Common Law', 'Disability', 'Parenthood',
                     'Divorce or Seperation', 'WFA-Terminating', 'Death', 'Working past 65', 'Plan Member Resp.', 'Preparing for Retirement',
                     'Contribution Rates','LWOP', 'Pension Transfer', 'Bridge Benefits', 'Newly Retired', 'Reaching 65', 'Re-employment', 'Indexing Rates', 'APS',
                     'Deferred Pension Plan', 'Web Tools', 'Surivor and Dependents', 'Pension Centre', 'Forms', 'Phoenix', 'CAF and RCMP',
