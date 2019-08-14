@@ -9,11 +9,11 @@
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="PBS">
 
-  <!-- --------------------------- CSS -------------------------- -->
+  <!-- --------------------------- CSS -------------------------->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/demo-grid.css">
+    <link rel="stylesheet" href="css/tiles-grid.css">
+    <link rel="stylesheet" href="css/tile-colors.css">
   </head>
 
   <!-- --------------------------- BODY -------------------------- -->
@@ -57,20 +57,21 @@
       <!-- ----------------------- CREATE TILES ------------------------------------ -->
       <div class="grid"></div>
 
-
-
-      <div class="summary">
-        <button id= "summary" class = "btn individualWidth">SUMMARY</button>
-      </div>
-
     </section>
 
-<footer>
-    <div><img src="_img/GEIR-BIL@476x248.png" alt="GEIR logo"></div>
-</footer>
-<div id="personcontainer">
-      	<button id= "person">ADD INDIVIDUAL</button>
+    <!-- ----------------------- FOOTER ------------------------------------ -->
+    <footer>
+        <div><img src="_img/GEIR-BIL@476x248.png" alt="GEIR logo"></div>
+        <div class="summary">
+            <button id= "summary" class = "btn individualWidth" onclick=" window.open('','_blank')">SUMMARY</button>
         </div>
+    </footer>
+
+    <!-- ----------------------- ADD INDIVIDUAL BUTTON ------------------------------------ -->
+    <div id="personcontainer">
+        <button id= "person">ADD INDIVIDUAL</button>
+    </div>
+
     <!-- ---------------------------- JAVASCRIPT SOURCES -------------------------------- -->
     <script src="src/web-animations-2.3.1.min.js"></script>
     <script src="src/hammer-2.0.8.min.js"></script>
@@ -78,20 +79,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="src/grid.js"></script>
-
-    <script>
-       function isDark( color ) {
-    var match = /rgb\((\d+).*?(\d+).*?(\d+)\)/.exec(color);
-    return ( match[1] & 255 )
-         + ( match[2] & 255 )
-         + ( match[3] & 255 )
-           < 3 * 256 / 2;
-}
-
-$('.card').each(function() {console.log($(this).css("background-color"))
-    $(this).css("color", isDark($('.card-title').css("background-color")) ? 'white' : 'black');
-});
-    </script>
 </body>
 
 </html>

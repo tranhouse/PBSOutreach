@@ -1,6 +1,9 @@
+/* PBS FONTS */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,500,700&display=swap');
+/* font-family: 'Roboto Condensed', sans-serif; * /
+/* font-weight: 300, 400 */
 
 /* ----------------- Base ----------------- */
-
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -26,18 +29,6 @@ body {
   color: #303e48; /* PBS main text color */
   margin:0; padding: 0 0 50px;
 }
-a {
-  color: #3396FF;
-  text-decoration: none;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -ms-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-a:hover {
-  color: #FF4BD8;
-}
 
 /* ------------------ Clearfix ----------------------*/
 
@@ -59,20 +50,21 @@ a:hover {
   font-size: inherit;
 }
 
-/* ------------------- Content -------------------- */
-/*.rcorners {
-  border-radius: 25px;
-  font-size: 12px;
-  border: 2px solid #000000;
-  padding: 20px;
-  width: 100%;
-  height: relative;*/ /* Removed by CRz
-}*/
-
-/* ------------------- Buttons -------------------- */
+/* ------------------- BUTTONS -------------------- */
 /*.individualWidth{
   width:100%;
 }*/ /* deleted by CRz */
+
+/* Animated fade in/out buttons */
+button{
+    -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+/* Webstats statistics button */
 #stats{
     background: #303e48;
     color:#fff;
@@ -87,18 +79,7 @@ a:hover {
 #stats:hover{
     background-color:#4a5e6d;
 }
-#webStats{
-    background: #4d5b65;
-    font-weight: 300 !important;
-    color: #fff;
-    padding:15px;
-}
 
-#webStats b, #webStats u{
-    font-weight: 300;
-    text-decoration: none;
-
-}
 #personcontainer{
     position:fixed; bottom: 0;
     width:100%;
@@ -127,31 +108,34 @@ a:hover {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  padding:20px 0;}
+  padding:20px 0;
+}
 
 #person:hover{
     background-color: #fe5b5d
 }
+.summary{
+    position: relative;
+    display: block;
+    width:100%;
+    text-align:right;
+    }
+#summary{
+     background:#fff;
+    color:#666;
+    font-weight: 700;
+    border:none;
+    padding: 1em 0;
+    width:200px;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline:none;
+    text-align:right;
+}
 .btn:focus,
 .btn:hover,
-.btn:active {
-  outline: 0;
-}
-.btn:hover {
-  background: #3989de;
-}
-.btn:active {
-  background: #3075bf;
-}
-.btn.active {
-  background: #60ca47;
-}
-.btn.active:hover {
-  background: #40b325;
-}
-.btn.active:active {
-  background: #309818;
-}
+.btn:active { outline: 0;}
+
 
 /* ------------------- Forms --------------------*/
 
@@ -171,23 +155,12 @@ a:hover {
   -o-appearance: none;
   appearance: none;
 }
-select.form-control {
+/*select.form-control {
   padding-right: 40px;
   cursor: pointer;
-}
+}*/
 select.form-control::-ms-expand {
   display: none;
-}
-.select-arrow {
-  position: absolute;
-  right: 10px;
-  top: 0;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  z-index: 2;
-  pointer-events: none;
 }
 .form-control:focus {
   outline: 0;
@@ -206,7 +179,6 @@ header .logo {
   max-width: 240px;
   margin: 60px auto 60px auto;
 }
-
 
 header .logo svg {
   width: 100%;
@@ -236,22 +208,139 @@ header h1 {font-size:1em;}
 }
 @media screen and (max-width: 450px) {
 header h1 {font-size:.7em;}
-#person{
-    padding:30px 0;
+#person{ padding:30px 0;}
 }
+
+/* --------------- Section ---------------- */
+
+section {
+  margin: 30px auto;
+  padding-top: 0;
+  max-width: 940px;
+  padding: 0 3%;
+  text-align: left;
 }
-/*
-header h1:first-of-type{
-     border-bottom: 1px solid #fff;
-     border-right: none;
-    padding-bottom: 0.6em;}
-header h1:last-of-type{
-    padding-left:0;
-    padding-top:0;
-    margin-top:0;
-}*/
+section h2{
+    font-size:1.35em;
+    text-transform: uppercase;
+    text-align:center;
+}
+
+@media (max-width: 600px) {
+  section.demo {
+    border-top: 0;
+  }
+}
+
+/* ------------- Webstats box ---------------*/
+#webStats{
+    background: #4d5b65;
+    font-weight: 300 !important;
+    color: #fff;
+    padding:15px;
+}
+
+#webStats b, #webStats u{
+    font-weight: 300;
+    text-decoration: none;
+
+}
 
 
+/* Search and Add tiles */
+.controls {
+    width:100%;
+  margin: 30px 0;
+}
+/* Search */
+.control {
+  position: relative;
+  display:inline-block;
+  width: 47%;
+  padding: 0;
+  margin-right:7%;
+}
+.control-icon {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  z-index: 2;
+  pointer-events: none;
+}
+.add-tile-container{
+    display:inline-block;
+    width:47%; margin-right:-2%;
+}
+
+input[type=text], select {
+font-family: 'Roboto Condensed', sans-serif;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+input#newTileName{
+    /*background: #d5bd71;*/
+    display: inline-block;
+    max-width:74%;
+    font-weight:700;
+    font-size:1em;
+    text-align:left;
+   /* border: 2px solid #d3ae37;;*/
+    color:#000;
+    margin 0;
+    padding: 10px 10px 9px;
+    border-bottom: 1px solid #303e48;
+    outline: none;
+}
+button.add-more-items{
+    background: #303e48;
+    display: inline-block;
+    color:#fff;
+    border:none;
+    font-size:1.5em;
+    box-sizing:border-box;
+    margin-left:-3px;
+     vertical-align: middle;
+     margin-bottom:4px;
+     max-width:25%;
+     padding: 6px 10px;
+     cursor: pointer;
+     outline: none;
+}
+button.add-more-items:hover{background-color:#4a5e6d;}
+input.search-field {
+  /*background:#92adb6;*/
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-bottom: 1px solid #303e48;;
+  border-radius: 0;
+  box-sizing: border-box;
+  text-align: left;
+  color:#303e48 !important;
+  font-weight: 700;
+}
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:#303e48;
+  opacity: 1; /* Firefox */
+  font-weight: 700;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #303e48;
+}
+input::-ms-input-placeholder { /* Microsoft Edge */
+  color: #303e48;
+}
 
 /* --------------- Footer ----------------- */
 
@@ -265,111 +354,25 @@ footer {
 }
 footer img{max-width:200px; }
 
-/* --------------- Sections ---------------- */
 
-section {
-  margin: 30px auto;
-  padding-top: 0;
-  max-width: 940px;
-  padding: 0 3%;
-
-  text-align: left;
-}
-section h2{
-    font-size:1.35em;
-    text-transform: uppercase;
-    text-align:center;
-
-}
-section.demo {
-  margin-top: 30px;
-}
-section h4 {
-  margin: 30px 0 15px 0;
-  font-weight: 500;
-  font-size: 20px;
-  color: #3e3e3e;
-}
+/* ADAPTIVE */
 @media (max-width: 600px) {
-  section.demo {
-    border-top: 0;
+  .control {
+    float: none;
+    width: auto;
+    margin: 0 0 15px 0;
+  }
+  .control.layout {
+    margin: 0;
   }
 }
 
-/* ----------- Section titles -------------- */
-
-/*.section-title {
-  color: #3e3e3e;
-  font-size: 26px;
-  font-weight: 700;
-  margin: 40px 0;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: center;
-}
-.section-title > span {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-}
-.section-title > span:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 10px;
-  bottom: 0;
-  right: 10px;
-  height: 2px;
-  background: #3e3e3e;*/ /* removed by CRz */
-}
-
-/* ------------- Feature list ---------------*/
-
-.feature-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.feature-list-item {
-  position: relative;
-  padding-left: 80px;
-  margin: 30px 0;
-  overflow: hidden;
-}
-.feature-list-icon {
-  display: block;
-  float: left;
-  margin-left: -80px;
-  width: 80px;
-  font-size: 48px;
-  line-height: 48px;
-  text-align: left;
-  color: #3396FF;
-}
-.feature-list-text h4 {
-  margin: 0 0 15px 0;
-  font-weight: 500;
-  font-size: 20px;
-}
-@media (max-width: 600px) {
-  .feature-list-item {
-    padding-left: 0;
+@media screen and (max-width: 450px) {
+ .control {
+  width: 85%;
+  margin-right:0;
   }
-  .feature-list-icon {
-    margin: -4px 10px 0 0;
-    width: 24px;
-    font-size: 24px;
-    line-height: inherit;
+ .add-tile-container{
+    width:100%; margin-right:0;
   }
-}
-
-/* ------------ Author ----------- */
-
-.author {
-  margin: 60px 0;
-  font-weight: 500;
-  font-size: 20px;
-  color: #3e3e3e;
-  font-style: italic;
-  text-align: center;
 }
