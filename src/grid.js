@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //Categories that have been established in the Event Outreach Program by GEIR
   //----------------------------------------------------------------------------------------------------------------------------------------
-  var eventCat = ['New to the PS','General', 'PIBS', 'Service Buyback','Plan Information', 'Married-Common Law', 'Disability', 'Parenthood',
+  var eventCat = ['SWAG', 'New to the PS','General', 'PIBS', 'Service Buyback','Plan Information', 'Married-Common Law', 'Disability', 'Parenthood',
                     'Divorce or Seperation', 'WFA-Terminating', 'Death', 'Working past 65', 'Plan Member Resp.', 'Preparing for Retirement',
                     'Contribution Rates','LWOP', 'Pension Transfer', 'Bridge Benefits', 'Newly Retired', 'Reaching 65', 'Re-employment', 'Indexing Rates', 'APS',
                     'Deferred Pension Plan', 'Web Tools', 'Surivor and Dependents', 'Pension Centre', 'Forms', 'Phoenix', 'CAF and RCMP',
@@ -40,19 +40,17 @@ document.addEventListener('DOMContentLoaded', function () {
   //----------------------------------------------------------------------------------------------------------------------------------------
 
   //-- CRZ : Adding GEIR Colors :: defined in demo-grid.css
-    var tileColours = ['GEIRColor1', 'GEIRColor2', 'GEIRColor3', ' GEIRColor4', 'GEIRColor5', 'GEIRColor6', 'GEIRColor7', 'GEIRColor8', 'GEIRColor9', 'GEIRColor10', 'GEIRColor11', 'GEIRColor12',
-  'GEIRColor13', 'GEIRColor14', 'GEIRColor15', 'GEIRColor16', 'GEIRColor17', 'GEIRColor18', 'GEIRColor19', 'GEIRColor20',
-  'GEIRColor21', 'GEIRColor22', 'GEIRColor23', 'GEIRColor24', 'GEIRColor25', 'GEIRColor26', 'GEIRColor27', 'GEIRColor28', 'GEIRColor29',
-  'GEIRColor30', 'GEIRColor31', 'GEIRColor32', 'GEIRColor33', 'GEIRColor34', 'GEIRColor35', 'GEIRColor36', 'GEIRColor37', 'GEIRColor38',
-  'GEIRColor39', 'GEIRColor40', 'GEIRColor41', 'GEIRColor42', 'GEIRColor43', 'GEIRColor44', 'GEIRColor45', 'GEIRColor46', 'GEIRColor47',
-  'GEIRColor48', 'GEIRColor49', 'GEIRColor50', 'GEIRColor51', 'GEIRColor52', 'GEIRColor53', 'GEIRColor54', 'GEIRColor55', 'GEIRColor56', 'GEIRColor57', 'GEIRColor58', 'GEIRColor59',
-  'GEIRColor60', 'GEIRColor61', 'GEIRColor62', 'GEIRColor63', 'GEIRColor64', 'GEIRColor65', 'GEIRColor66', 'GEIRColor67', 'GEIRColor68', 'GEIRColor69',
-  'GEIRColor70', 'GEIRColor71', 'GEIRColor72', 'GEIRColor73', 'GEIRColor74', 'GEIRColor75', 'GEIRColor76', 'GEIRColor77', 'GEIRColor78', 'GEIRColor79',
-  'GEIRColor80', 'GEIRColor81', 'GEIRColor82', 'GEIRColor83', 'GEIRColor84', 'GEIRColor85', 'GEIRColor86', 'GEIRColor87',
-  'GEIRColor88', 'GEIRColor89', 'GEIRColor90', 'GEIRColor91', 'GEIRColor92', 'GEIRColor93', 'GEIRColor94', 'GEIRColor95', 'GEIRColor96', 'GEIRColor97', 'GEIRColor98',
-  'GEIRColor99', 'GEIRColor100', 'GEIRColor101', 'GEIRColor102', 'GEIRColor103', 'GEIRColor104', 'GEIRColor105', 'GEIRColor106', 'GEIRColor107', 'GEIRColor108', 'GEIRColor109', 'GEIRColor110',
-  'GEIRColor111', 'GEIRColor112', 'GEIRColor113', 'GEIRColor114', 'GEIRColor115', 'GEIRColor116', 'GEIRColor117', 'GEIRColor118', 'GEIRColor119', 'GEIRColor120', 'GEIRColor121', 'GEIRColor122', 'GEIRColor123',
-  'GEIRColor124', 'GEIRColor125', 'GEIRColor126', 'GEIRColor127', 'GEIRColor128', 'GEIRColor129'];
+    var tileColours = [	'GEIRColor1', 'GEIRColor2', 'GEIRColor3', ' GEIRColor4', 'GEIRColor5', 'GEIRColor6', 'GEIRColor7', 'GEIRColor8', 'GEIRColor9', 'GEIRColor10', 
+					   	'GEIRColor11', 'GEIRColor12','GEIRColor13', 'GEIRColor14', 'GEIRColor15', 'GEIRColor16', 'GEIRColor17', 'GEIRColor18', 'GEIRColor19', 'GEIRColor20',
+  					   	'GEIRColor21', 'GEIRColor22', 'GEIRColor23', 'GEIRColor24', 'GEIRColor25', 'GEIRColor26', 'GEIRColor27', 'GEIRColor28', 'GEIRColor29','GEIRColor30', 							'GEIRColor31', 'GEIRColor32', 'GEIRColor33', 'GEIRColor34', 'GEIRColor35', 'GEIRColor36', 'GEIRColor37', 'GEIRColor38', 'GEIRColor39', 'GEIRColor40',
+					   	'GEIRColor41', 'GEIRColor42', 'GEIRColor43', 'GEIRColor44', 'GEIRColor45', 'GEIRColor46', 'GEIRColor47', 'GEIRColor48', 'GEIRColor49', 'GEIRColor50',
+					   	'GEIRColor51', 'GEIRColor52', 'GEIRColor53', 'GEIRColor54', 'GEIRColor55', 'GEIRColor56', 'GEIRColor57', 'GEIRColor58', 'GEIRColor59', 'GEIRColor60',
+					   	'GEIRColor61', 'GEIRColor62', 'GEIRColor63', 'GEIRColor64', 'GEIRColor65', 'GEIRColor66', 'GEIRColor67', 'GEIRColor68', 'GEIRColor69', 'GEIRColor70',
+					   	'GEIRColor71', 'GEIRColor72', 'GEIRColor73', 'GEIRColor74', 'GEIRColor75', 'GEIRColor76', 'GEIRColor77', 'GEIRColor78', 'GEIRColor79', 'GEIRColor80',
+					   	'GEIRColor81', 'GEIRColor82', 'GEIRColor83', 'GEIRColor84', 'GEIRColor85', 'GEIRColor86', 'GEIRColor87', 'GEIRColor88', 'GEIRColor89', 'GEIRColor90',
+					   	'GEIRColor91', 'GEIRColor92', 'GEIRColor93', 'GEIRColor94', 'GEIRColor95', 'GEIRColor96', 'GEIRColor97', 'GEIRColor98', 'GEIRColor99', 'GEIRColor100',
+					   	'GEIRColor101', 'GEIRColor102', 'GEIRColor103', 'GEIRColor104', 'GEIRColor105', 'GEIRColor106', 'GEIRColor107', 'GEIRColor108', 'GEIRColor109', 								'GEIRColor110', 'GEIRColor111', 'GEIRColor112', 'GEIRColor113', 'GEIRColor114', 'GEIRColor115', 'GEIRColor116', 'GEIRColor117', 'GEIRColor118',
+					   	'GEIRColor119', 'GEIRColor120', 'GEIRColor121', 'GEIRColor122', 'GEIRColor123', 'GEIRColor124', 'GEIRColor125', 'GEIRColor126', 'GEIRColor127', 								'GEIRColor128', 'GEIRColor129'];
 
   var dragOrder = [];
   var uuid = 0;
@@ -161,21 +159,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         if(this.id =='summary'){
+			if(personCount!=0){
+			  document.write("<b><u>Number of People Spoken to:</u></b>"          + personCount);
+			  document.write("<br>");
 
-          document.write("<b><u>Number of People Spoken to:</u></b>"          + personCount);
-          document.write("<br>");
+			  document.write("<b><u>Number of Questions Asked in Total:</u></b>"  + questPerPerson.reduce(getSum));
+			  document.write("<br>");
 
-          document.write("<b><u>Number of Questions Asked in Total:</u></b>"  + questPerPerson.reduce(getSum));
-          document.write("<br>");
+			  document.write("<b><u>Average Questions per Person:</u></b>"        + Math.round(averageQuestions *100)/100);
+			  document.write("<br><br>");
 
-          document.write("<b><u>Average Questions per Person:</u></b>"        + Math.round(averageQuestions *100)/100);
-          document.write("<br><br>");
-
-          for(i=0; i<eventCat.length; i++){
-            document.write(masterCount[i][0] + "&nbsp - &nbsp" + masterCount[i][1]);
-            document.write("<br>");
-          }
-        }
+			  for(i=0; i<eventCat.length; i++){
+				document.write(masterCount[i][0] + "&nbsp - &nbsp" + masterCount[i][1]);
+				document.write("<br>");
+			  }
+        
+				//---------------AJAX REQUEST----------------
+				var data_obj ={masterCount:masterCount};
+				
+				$.ajax('/data', {data: JSON.stringify(data_obj), method:'POST', contentType:'application/json'}).done(function(data){
+							 console.log(data);
+				});
+			}//end if to check number of people
+		}//end if for summary
 
 
 
