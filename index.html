@@ -38,9 +38,11 @@
           <p id = "topQuestions"> <b><u>List of top 5:</u></b> </p>
         </div>
 
-        <div>
+        <div id="statsContainer">
             <button id= "stats" >See web statistics</button>
+
         </div>
+
 
     <!-- ----------------------- SEARCH & ADD TILE --------------------------------- -->
       	<div class="controls cf">
@@ -62,14 +64,15 @@
     <!-- ----------------------- FOOTER ------------------------------------ -->
     <footer>
         <div><img src="_img/GEIR-BIL@476x248.png" alt="GEIR logo"></div>
-        <div class="summary">
-            <button id= "summary" class = "btn individualWidth" onclick=" window.open('','_blank')">SUMMARY</button>
-        </div>
     </footer>
 
     <!-- ----------------------- ADD INDIVIDUAL BUTTON ------------------------------------ -->
+    <div id="scrollToTopContainer">
+        <button onclick="topFunction()" id="scrollToTop">^<br>|</a></button>
+    </div>
     <div id="personcontainer">
         <button id= "person">ADD INDIVIDUAL</button>
+        <button id= "summary" class = "btn individualWidth"><span>DONE FOR THE DAY</span></button>
     </div>
 
     <!-- ---------------------------- JAVASCRIPT SOURCES -------------------------------- -->
@@ -79,6 +82,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="src/grid.js"></script>
+
+    <script src="src/scrollToTop.js"></script>
 </body>
 
 </html>
