@@ -332,19 +332,22 @@ document.addEventListener('DOMContentLoaded', function () {
     //--------EVENT LISTENER------
 
     $('#' + uuid).mousedown(function() {
+		
+		//find id: must subtract 1 to correspond to the array
          var index = ($(this).attr("id")) -1;
+		
         //-----change colour-----
-          // make a jQ collection of the DOM element from the event
-          var $elem = $(this);
+			  // make a jQ collection of the DOM element from the event
+			  var $elem = $(this);
 
-          // change the background color to what you want
-           $elem.css('opacity', '0');
-          // after 1 second, change it back
-          setTimeout(function() {
-             $elem.css('opacity', '1');
-          }, 50);
+			  // change the background color to what you want
+			   $elem.css('opacity', '0');
+			  // after 1 second, change it back
+			  setTimeout(function() {
+				 $elem.css('opacity', '1');
+			  }, 50);
 
-        //After determining which tile was clicked, must subtract 1 to correspond to the array
+        //After determining which tile was clicked, add to counter 
         quesCount++;
         masterCount[index][1]++;
 
