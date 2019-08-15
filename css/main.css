@@ -13,6 +13,7 @@ html {
   overflow-y: scroll;
   overflow-x: hidden;
   background: #fff;
+  scroll-behavior: smooth; /* To smooth scroll to top button */
 }
 html.dragging body {
   -moz-user-select: none;
@@ -65,6 +66,7 @@ button{
 }
 
 /* Webstats statistics button */
+#statsContainer{margin-bottom: 100px;}
 #stats{
     background: #303e48;
     color:#fff;
@@ -75,7 +77,11 @@ button{
     text-transform: uppercase;
     cursor: pointer;
     outline:none;
+    display: inline-block;
 }
+
+#stats{float:left;}
+
 #stats:hover{
     background-color:#4a5e6d;
 }
@@ -85,13 +91,11 @@ button{
     width:100%;
     text-align:center;
     z-index:1000;
-   -webkit-box-shadow: 0px -5px 12px 1px rgba(0,0,0,0.63);
-    -moz-box-shadow: 0px -5px 12px 1px rgba(0,0,0,0.63);
-    box-shadow: 0px -5px 12px 1px rgba(0,0,0,0.63);
+
 }
-#person{
+#person, #summary{
   margin 0 auto;
-  width:100%;
+  width:80%;
   display: inline-block;
   border: 0;
   outline: 0;
@@ -99,7 +103,6 @@ button{
   font-weight: 700;
   text-align: center;
   white-space: nowrap;
-  background: #ef4144;
   color: #fff;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
@@ -109,29 +112,40 @@ button{
   -ms-user-select: none;
   user-select: none;
   padding:20px 0;
+  -webkit-box-shadow: 0px -5px 12px 1px rgba(0,0,0,0.63);
+    -moz-box-shadow: 0px -5px 12px 1px rgba(0,0,0,0.63);
+    box-shadow: 0px -5px 12px 1px rgba(0,0,0,0.63);
+    float:left;
 }
-
+#person{background: #303e48;}
 #person:hover{
-    background-color: #fe5b5d
+   background-color:#4a5e6d;
 }
-.summary{
-    position: relative;
-    display: block;
-    width:100%;
-    text-align:right;
-    }
 #summary{
-     background:#fff;
-    color:#666;
-    font-weight: 700;
-    border:none;
-    padding: 1em 0;
-    width:200px;
-    text-transform: uppercase;
-    cursor: pointer;
-    outline:none;
-    text-align:right;
+    background: #ef4144;
+    width:20%;
+    float:right;
+    }
+#summary:hover{background-color: #fe5b5d}
+
+#scrollToTopContainer{
+    position:fixed; bottom: 100px; right: 0;
+    width:50px;
+    text-align:center;
+    z-index:1000;
 }
+#scrollToTop{
+    display: none;
+    background: #fff;
+    font-size: 2em;
+    line-height:.5em;
+    font-weight: 700;
+    height:75px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+  }
+
 .btn:focus,
 .btn:hover,
 .btn:active { outline: 0;}
@@ -205,10 +219,14 @@ header{text-align: left; padding-left:3%;}
 }
 @media screen and (max-width: 720px) {
 header h1 {font-size:1em;}
+/* Replace button text for EOD (End od day), shorter text for mobile */
+#summary span{display: none;}
+#summary:after {content: 'EOD';}
 }
+
 @media screen and (max-width: 450px) {
 header h1 {font-size:.7em;}
-#person{ padding:30px 0;}
+#person, #summary{ padding:30px 0;}
 }
 
 /* --------------- Section ---------------- */
