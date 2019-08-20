@@ -1,0 +1,29 @@
+.feedbackform{width:100%;}
+.lab { display : inline-block; width:30%; margin-right:3%;}
+.lab > input{ /* HIDE RADIO */
+    visibility: hidden; /* Makes input not-clickable */
+    position: absolute; /* Remove input from document flow */
+}
+.lab > input + div{ /* DIV STYLES */
+    cursor:pointer;
+    border:2px solid transparent;
+    background:#ffd6bb;
+    display:table; /*For vertical align text */
+    width:100%; text-align: center;
+    padding-bottom:90%;
+    text-transform: uppercase;
+    padding:10px 0;
+}
+.lab > input + div div{display:table-cell; vertical-align: middle;}
+
+.lab > input + div:last-of-type{margin-right:0 !important;}
+
+.lab > input + div:hover{background: #F98E47;}
+
+.lab > input + div:after{content:""; display:block; padding-bottom: 100%;}
+
+.lab > input:checked + div{ /* (RADIO CHECKED) DIV STYLES */
+    background-color: #ffd6bb;
+    border: 1px solid #ff6600;
+}
+#questions>div{display:none;}
