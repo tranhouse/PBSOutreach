@@ -3,7 +3,7 @@ jQuery(document).ready(function(){
 
 // Get child absolute height and change parent (All question divs are absolute for)
 var parent = $('#questions'),
-child = parent.children('.test');
+child = parent.children('#questions div:first-child');
 if (child.height() > parent.height()) {
     parent.height(child.height());
     // can also use parent.height('auto');

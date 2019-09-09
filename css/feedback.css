@@ -1,5 +1,5 @@
 #feedback form{width:100%;}
-#questions{position: relative;} .test{position: absolute; top: 0; left: 0; width:100%;}
+#questions{position: relative;} #questions div:first-child{position: absolute; top: 0; left: 0; width:100%;}
 label { display : inline-block; width:30%; margin-right:3%; background:#333;}
 label > input{ /* HIDE DEFAULT RADIO BUTTON*/
     visibility: hidden; /* Makes input not-clickable */
