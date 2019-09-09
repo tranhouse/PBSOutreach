@@ -1,29 +1,48 @@
-.feedbackform{width:100%;}
-.lab { display : inline-block; width:30%; margin-right:3%;}
-.lab > input{ /* HIDE RADIO */
+#feedback form{width:100%;}
+#questions{position: relative;} .test{position: absolute; top: 0; left: 0; width:100%;}
+label { display : inline-block; width:30%; margin-right:3%; background:#333;}
+label > input{ /* HIDE DEFAULT RADIO BUTTON*/
     visibility: hidden; /* Makes input not-clickable */
     position: absolute; /* Remove input from document flow */
 }
-.lab > input + div{ /* DIV STYLES */
+/* Div that replace default radio button (color squares)*/
+label > input + div{ /* DIV STYLES */
     cursor:pointer;
     border:2px solid transparent;
-    background:#ffd6bb;
+    background:#333;
     display:table; /*For vertical align text */
     width:100%; text-align: center;
-    padding-bottom:90%;
     text-transform: uppercase;
-    padding:10px 0;
+    padding:100px 0;
+    color:#fff;
+    font-size:4em;
+    font-weight:700;
 }
-.lab > input + div div{display:table-cell; vertical-align: middle;}
 
-.lab > input + div:last-of-type{margin-right:0 !important;}
+ /*temporary dealing with two lines of text */
+label:last-child > input + div{padding:61px 0 62px;}
 
-.lab > input + div:hover{background: #F98E47;}
+/* Form option buttons colors */
+/* yes */
+label:nth-child(1) > input + div{background:rgba(56, 150, 176, 1) !important;}
+label:nth-child(1) > input + div:hover{background:rgba(56, 150, 176, .9) !important;}
+/*no*/
+label:nth-child(2) > input + div{background:rgba(250, 64, 65, 1) !important;}
+label:nth-child(2) > input + div:hover{background:rgba(250, 64, 65, .9) !important;}
+/*Don t know*/
+label:nth-child(3) > input + div{background:rgba(211, 175, 55, 1) !important;}
+label:nth-child(3) > input + div:hover{background:rgba(211, 175, 55, .9) !important;}
 
-.lab > input + div:after{content:""; display:block; padding-bottom: 100%;}
+/*Mouse hover effect*/
+label > input + div:hover{background: #F98E47 !important;}
 
-.lab > input:checked + div{ /* (RADIO CHECKED) DIV STYLES */
-    background-color: #ffd6bb;
-    border: 1px solid #ff6600;
-}
+/* Fix alignment, removing last div right margin */
+label > input + div:last-of-type{margin-right:0 !important;}
+
+/* (RADIO CHECKED) DIV STYLES -- Do not need since question changes on click --
+label > input:checked + div{}
+ */
+
+
+/* Hidding all questions on load. JS load the first one */
 #questions>div{display:none;}
