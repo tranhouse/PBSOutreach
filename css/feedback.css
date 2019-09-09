@@ -43,6 +43,5 @@ label > input + div:last-of-type{margin-right:0 !important;}
 label > input:checked + div{}
  */
 
-
 /* Hidding all questions on load. JS load the first one */
 #questions>div{display:none;}
