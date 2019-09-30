@@ -25,11 +25,20 @@
     </header>
     <section>
         <h1>Outreach event statistics page</h1>
-
-        <canvas id="Top10"></canvas>
-
-        <canvas id="Top5"></canvas>
-
+		<!-- ---Dropdown menu for dates ------>
+		<form>Choose Date:
+         <select id='dates' name = "dropdown">
+            <option value="" disabled selected>Select</option>
+         </select>
+      	</form>
+		<!-- ---------------------------- WEB STATS --------------------------------- -->
+        <div id="webStats" class="">
+          <p id = "numPeople"> <b><u>Number of People Spoken to:</u></b> </p>
+          <p id = "numQuestions"> <b><u>Number of Questions Asked:</u></b> </p>
+          <p id = "avgQuestions"> <b><u>Average Questions per Person:</u></b> </p>
+        </div>
+		
+        <canvas id="graph"></canvas>
 
     </section>
 
