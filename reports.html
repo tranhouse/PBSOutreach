@@ -60,9 +60,10 @@
     <!-- show webStats box only when a date is selected-->
     <script>
     document.getElementById('dates').addEventListener('change', function () {
-    var style = this.value != '' ? 'block' : 'none';
-    document.getElementById('webStats').style.display = style;
-});
+        var style = this.value != '' ? 'block' : 'none';
+        document.getElementById('webStats').style.display = style;
+        document.getElementById('reports').style.backgroundImage="url()";//happy face
+        });
     </script>
   </body>
 </html>

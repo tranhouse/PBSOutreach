@@ -3,3 +3,12 @@
 #containerSatisfaction{width: 49.5% !important;  height: auto !important; display:inline-block !important;}
 
 #reports #webStats{display:none;}
+
+/*HAPPY FACE*/
+body{
+    background: url(../_img/smile.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
