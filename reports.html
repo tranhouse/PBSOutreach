@@ -9,7 +9,8 @@
 
   <!-- -------------------------- CSS -------------------------->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="css/reports.css">
+
 
     <!-- Chartjs.org -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
@@ -34,7 +35,9 @@
          </select>
       	</form>
 		<!-- ---------------------------- WEB STATS --------------------------------- -->
+
         <div id="webStats" class="">
+        <h3>Summary</h3>
           <p id = "numPeople"> <b><u>Number of People Spoken to:</u></b> </p>
           <p id = "numQuestions"> <b><u>Number of Questions Asked:</u></b> </p>
           <p id = "avgQuestions"> <b><u>Average Questions per Person:</u></b> </p>
@@ -53,5 +56,13 @@
 
     <!-- Geir charts -->
     <script src="src/geircharts.js"></script>
+
+    <!-- show webStats box only when a date is selected-->
+    <script>
+    document.getElementById('dates').addEventListener('change', function () {
+    var style = this.value != '' ? 'block' : 'none';
+    document.getElementById('webStats').style.display = style;
+});
+    </script>
   </body>
 </html>
