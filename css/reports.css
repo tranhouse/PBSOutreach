@@ -4,11 +4,9 @@
 
 #reports #webStats{display:none;}
 
+#webStats{margin-bottom:20px;}
+
 /*HAPPY FACE*/
-body{
-    background: url(../_img/smile.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+body{ background: url(../_img/yellow.jpg) repeat;}
+#happysmileDiv{ max-width: 100%; text-align: center;}
+#happysmile img{max-width: 100%;}

@@ -31,11 +31,12 @@
          <select id='dates' name = "dropdown">
             <optgroup>
                 <option value="" disabled selected>Select</option>
+                <option value="test" >test</option>
             </optgroup>
          </select>
       	</form>
 		<!-- ---------------------------- WEB STATS --------------------------------- -->
-
+        <div id="happysmileDiv"><img src="_img/smile.jpg" id="happysmile"></div>
         <div id="webStats" class="">
         <h3>Summary</h3>
           <p id = "numPeople"> <b><u>Number of People Spoken to:</u></b> </p>
@@ -46,7 +47,7 @@
         <canvas id="graph"></canvas>
 
     </section>
-
+    <section id="happyface"></section>
     <!-- ---------------- JAVASCRIPT SOURCES ---------------- -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -62,7 +63,17 @@
     document.getElementById('dates').addEventListener('change', function () {
         var style = this.value != '' ? 'block' : 'none';
         document.getElementById('webStats').style.display = style;
-        document.getElementById('reports').style.backgroundImage="url()";//happy face
+        document.getElementById('happysmile').src='_img/smile2.jpg';//happy face
+
+        setTimeout(function() {
+            document.getElementById('happysmile').src='_img/smile.jpg';
+            }, 500);
+
+        var smle = this.value != '' ? 'none' : 'block';
+        setTimeout(function() {
+            document.getElementById('happysmileDiv').style.display = smle
+            document.getElementById('reports').style.backgroundImage="url()";
+            }, 1000); // for 1 seconds
         });
     </script>
   </body>
