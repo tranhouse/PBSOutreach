@@ -28,7 +28,9 @@
 		<!-- ---Dropdown menu for dates ------>
 		<form>Choose Date:
          <select id='dates' name = "dropdown">
-            <option value="" disabled selected>Select</option>
+            <optgroup>
+                <option value="" disabled selected>Select</option>
+            </optgroup>
          </select>
       	</form>
 		<!-- ---------------------------- WEB STATS --------------------------------- -->
@@ -37,7 +39,7 @@
           <p id = "numQuestions"> <b><u>Number of Questions Asked:</u></b> </p>
           <p id = "avgQuestions"> <b><u>Average Questions per Person:</u></b> </p>
         </div>
-		
+
         <canvas id="graph"></canvas>
 
     </section>
