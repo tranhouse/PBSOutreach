@@ -335,7 +335,7 @@ button.add-more-items{
      outline: none;
 }
 button.add-more-items:hover{background-color:#4a5e6d;}
-input.search-field {
+input.search-field, select {
   /*background:#92adb6;*/
   width: 100%;
   padding: 12px 20px;
@@ -348,15 +348,17 @@ input.search-field {
   color:#303e48 !important;
   font-weight: 700;
 }
-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+select, optgroup{text-transform: uppercase;}
+input::placeholder, select::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color:#303e48;
   opacity: 1; /* Firefox */
   font-weight: 700;
+  text-transform: uppercase;
 }
-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+input:-ms-input-placeholder, select:-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: #303e48;
 }
-input::-ms-input-placeholder { /* Microsoft Edge */
+input::-ms-input-placeholder, select::-ms-input-placeholder { /* Microsoft Edge */
   color: #303e48;
 }
 
