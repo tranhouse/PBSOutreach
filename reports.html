@@ -64,6 +64,16 @@
         var style = this.value != '' ? 'block' : 'none';
         document.getElementById('webStats').style.display = style;
         document.getElementById('happysmile').src='_img/smile2.jpg';//happy face
+
+        setTimeout(function() {
+            document.getElementById('happysmile').src='_img/smile.jpg';
+            }, 500);
+
+        var smle = this.value != '' ? 'none' : 'block';
+        setTimeout(function() {
+            document.getElementById('happysmileDiv').style.display = smle
+            document.getElementById('reports').style.backgroundImage="url()";
+            }, 1000); // for 1 seconds
         });
     </script>
   </body>
