@@ -95,7 +95,7 @@ button{
 }
 #person, #summary{
   margin 0 auto;
-  width:80%;
+  width:100%;
   display: inline-block;
   border: 0;
   outline: 0;
@@ -121,12 +121,12 @@ button{
 #person:hover{
    background-color:#4a5e6d;
 }
-#summary{
+/*#summary{
     background: #ef4144;
     width:20%;
     float:right;
     }
-#summary:hover{background-color: #fe5b5d}
+#summary:hover{background-color: #fe5b5d}*/
 
 #scrollToTopContainer{
     position:fixed; bottom: 100px; right: 0;
