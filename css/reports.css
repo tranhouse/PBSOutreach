@@ -9,4 +9,4 @@
 /*HAPPY FACE*/
 body{ background: url(../_img/yellow.jpg) repeat;}
 #happysmileDiv{ max-width: 100%; text-align: center;}
-#happysmile img{max-width: 100%;}
+#happysmile{max-width: 100%; height: auto;}
