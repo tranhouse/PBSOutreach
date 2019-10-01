@@ -1,47 +1,64 @@
+.selected{background:rgba(56, 150, 176, 1) !important;}
+.selected2{background:#303e48 !important;}
+
+/* Hidding all questions on load. JS load the first one
+#questions>div{display:none;}
+#demographics>div{display:none;}
+*/
 #feedback form{width:100%;}
-#questions{position: relative;} #questions div:first-child{position: absolute; top: 0; left: 0; width:100%;}
-label { display : inline-block; width:30%; margin-right:3%; background:#333;}
-label > input{ /* HIDE DEFAULT RADIO BUTTON*/
+
+section{position: relative;}
+
+/* Lebel is used as a "wrap" for each option */
+label{
+    display : inline-block; margin:0 3% 3% 0;
+    height: 50px; padding: 0 5px;
+    box-sizing: border-box; /* vertical alignment */
+    vertical-align: top;
+}
+/* HIDE DEFAULT RADIO BUTTON*/
+label > input{
     visibility: hidden; /* Makes input not-clickable */
     position: absolute; /* Remove input from document flow */
 }
 /* Div that replace default radio button (color squares)*/
 label > input + div{ /* DIV STYLES */
+    position: relative;
     cursor:pointer;
     border:2px solid transparent;
-    background:#333;
-    display:table; /*For vertical align text */
+    margin:auto; /* IMPORTANT :: RE FLEX alignment */
     width:100%; text-align: center;
     text-transform: uppercase;
-    padding:100px 0;
     color:#fff;
-    font-size:4em;
-    font-weight:700;
 }
+/* FLEX mode to enable vertical text align */
+label > input + div{
+    display: inline-flex;
+    color: #fff; font-weight: 400; height: 50px;
+    }
+/* SPAN is used to vertical align text in the label div (flex) */
+label > input + div span{ display:block; margin:auto; text-align: left; text-transform: initial;}
 
- /*temporary dealing with two lines of text */
-label:last-child > input + div{padding:61px 0 62px;}
 
-/* Form option buttons colors */
+/* Demographics form options size */
+#demographics label{width:15%; background:#303e48;}
+
+/* Demographics mouse hover effect */
+#demographics label:hover{ background:  #3a4b57;}
+
+/* Questions  form options size */
+#questions label{width:28%;}
+
+#questions label > input + div{font-weight:700;}
+
+/* Questions form options colors */
 /* yes */
-label:nth-child(1) > input + div{background:rgba(56, 150, 176, 1) !important;}
-label:nth-child(1) > input + div:hover{background:rgba(56, 150, 176, .9) !important;}
+#questions label:first-of-type{background:rgba(56, 150, 176, 1)}
+#questions label:hover:first-of-type{background:rgba(56, 150, 176, .9)}
 /*no*/
-label:nth-child(2) > input + div{background:rgba(250, 64, 65, 1) !important;}
-label:nth-child(2) > input + div:hover{background:rgba(250, 64, 65, .9) !important;}
+#questions label:nth-of-type(2){background:rgba(250, 64, 65, 1)}
+#questions label:hover:nth-child(2){background:rgba(250, 64, 65, .9)}
 /*Don t know*/
-label:nth-child(3) > input + div{background:rgba(211, 175, 55, 1) !important;}
-label:nth-child(3) > input + div:hover{background:rgba(211, 175, 55, .9) !important;}
+#questions label:nth-of-type(3){background:rgba(211, 175, 55, 1)}
+#questions label:hover:nth-of-type(3){background:rgba(211, 175, 55, .9)}
 
-/*Mouse hover effect*/
-label > input + div:hover{background: #F98E47 !important;}
-
-/* Fix alignment, removing last div right margin */
-label > input + div:last-of-type{margin-right:0 !important;}
-
-/* (RADIO CHECKED) DIV STYLES -- Do not need since question changes on click --
-label > input:checked + div{}
- */
-
-/* Hidding all questions on load. JS load the first one */
-#questions>div{display:none;}
