@@ -5,8 +5,8 @@
 #questions>div{display:none;}
 #demographics>div{display:none;}
 */
-#feedback form{width:100%;}
 
+#feedback form{width:100%;}
 section{position: relative;}
 
 /* Lebel is used as a "wrap" for each option */
@@ -15,13 +15,18 @@ label{
     height: 50px; padding: 0 5px;
     box-sizing: border-box; /* vertical alignment */
     vertical-align: top;
+    background:#303e48;
 }
+
+/* Mouse hover */
+label:hover{ background:#465a68;}
+
 /* HIDE DEFAULT RADIO BUTTON*/
 label > input{
     visibility: hidden; /* Makes input not-clickable */
     position: absolute; /* Remove input from document flow */
 }
-/* Div that replace default radio button (color squares)*/
+/* Div that replace default radio button */
 label > input + div{ /* DIV STYLES */
     position: relative;
     cursor:pointer;
@@ -39,26 +44,15 @@ label > input + div{
 /* SPAN is used to vertical align text in the label div (flex) */
 label > input + div span{ display:block; margin:auto; text-align: left; text-transform: initial;}
 
-
 /* Demographics form options size */
-#demographics label{width:15%; background:#303e48;}
-
-/* Demographics mouse hover effect */
-#demographics label:hover{ background:  #3a4b57;}
+#demographics label{width:15%;}
 
 /* Questions  form options size */
 #questions label{width:28%;}
 
-#questions label > input + div{font-weight:700;}
-
-/* Questions form options colors */
-/* yes */
-#questions label:first-of-type{background:rgba(56, 150, 176, 1)}
-#questions label:hover:first-of-type{background:rgba(56, 150, 176, .9)}
-/*no*/
-#questions label:nth-of-type(2){background:rgba(250, 64, 65, 1)}
-#questions label:hover:nth-child(2){background:rgba(250, 64, 65, .9)}
-/*Don t know*/
-#questions label:nth-of-type(3){background:rgba(211, 175, 55, 1)}
-#questions label:hover:nth-of-type(3){background:rgba(211, 175, 55, .9)}
+/* GEIR colors
+light blue : background:rgba(56, 150, 176, 1)
+red/pink: background:rgba(250, 64, 65, 1)
+gold: background:rgba(211, 175, 55, 1)
+*/
 
