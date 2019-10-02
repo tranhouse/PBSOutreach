@@ -307,19 +307,12 @@
     <!--Change color when option is selected -->
     <script>
     $(document).ready(function() {
-        $('#demographics input[type="radio"]').change(
+        $('section input[type="radio"]').change(
             function(){
                 if ($(this).is(':checked')) {
                     $(this.parentNode).addClass('selected').siblings().removeClass('selected');
             }
-            });
-
-        $('#questions input[type="radio"]').change(
-            function(){
-                if ($(this).is(':checked')) {
-                    $(this.parentNode).addClass('selected2').siblings().removeClass('selected2');
-            }
-            });
+        });
     });
 	</script>
   </body>
